@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests,re
-from scrape_one_country import get_team_squad
+from Python.scraping.scrape_one_country import get_team_squad
 import json
 
 URL = "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads"
