@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-import requests,re
-URL="https://en.wikipedia.org/wiki/Czech_Republic_national_football_team"
+import requests,re,json
+URL="https://en.wikipedia.org/wiki/Cape_Verde_national_football_team"
 URL_wiki = "https://en.wikipedia.org"
 HEADERS = {
     "User-Agent": "Mozilla/5.0"
@@ -56,10 +56,12 @@ def get_team_squad(url):
 
     return players_list
 
-# def main():
-#     soup = create_soup(URL)
-#     players = get_all_players(soup)
-#     players_list = process_players(players)
-#     print('finish!')
+def main():
+    soup = create_soup(URL)
+    players = get_all_players(soup)
+    players_list = process_players(players)
+    with open('one_team.json','w') as file:
+            json.dump(players_list,file)
+    print('finish!')
 
-# main()
+main()

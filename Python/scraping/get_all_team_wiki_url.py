@@ -28,7 +28,7 @@ def create_soup(url):
 def get_all_team_players(links):
     teams = []
     for link in links:
-        country = re.search(r'(\w+)_national_(football|soccer)_team', link).group(1)
+        country = re.search(r'(\w+)_(men%27s_)?national_(football|soccer)_team', link).group(1)
         team = {'country':country, 'squad':get_team_squad(link)}
         teams.append(team)
 
