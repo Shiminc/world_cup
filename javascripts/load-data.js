@@ -1,0 +1,14 @@
+d3.json("../data/processed_data.json")
+.then(data => {
+    // console.table(data)
+    console.log(data.length)
+
+    //test with one team first
+    const oneTeam = data.filter(d => d.country==='Spain')
+    console.table(oneTeam);
+    console.log(xScale.bandwidth())
+    console.log(yScale.bandwidth())
+
+    plot(oneTeam);
+  })
+.catch(error => console.log(error));
