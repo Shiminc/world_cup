@@ -11,20 +11,21 @@ const plot = (data) => {
   // Append the group that will contain the inner chart
     const teamPlot = svg
     .append("g")
-      .attr("transform", `translate(0, 0)`)
+      .attr("transform", `translate(${xScale.bandwidth()},${yScale.bandwidth()}`)
       .attr('class','team_plot');
 
 
-    teamPlot.selectAll('rect')
+    teamPlot.selectAll('circle')
                 .data(data)
-                .join('rect')
+                .join('circle')
                 .attr('class','player-rect')
-                .attr('height',yScale.bandwidth())
-                .attr('width',xScale.bandwidth())
+                // .attr('height',yScale.bandwidth())
+                // .attr('width',xScale.bandwidth())
+                .attr('r',xScale.bandwidth()/3)
                 .attr('stroke-width',0.01)
                 .attr('stroke','black')
                 .attr('fill',d => colorScale(d.play_in_entity))
-                .attr('x',(d,i) => xScale(i%teamDimension.width))
-                .attr('y',(d,i) => yScale(Math.floor(i/teamDimension.width)))
+                .attr('cx',(d,i) => xScale(i%teamDimension.width))
+                .attr('cy',(d,i) => yScale(Math.floor(i/teamDimension.width)))
                 // .attr('cy',(d,i) => console.log(calculate_x(i)))
 };

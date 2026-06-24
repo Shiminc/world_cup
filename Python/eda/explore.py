@@ -14,6 +14,7 @@ def reorganise_dataframe(data_df):
         data['play_in'] = data['play_in'].apply(lambda x:x.lstrip('the_'))
         data['country'] = data_df.iloc[i]['country']
         data['local'] = data['play_in'] == data['country']
+        data.sort_values(by='play_in',inplace=True)
         if i==0:
             df_total = data
         else:
@@ -21,7 +22,18 @@ def reorganise_dataframe(data_df):
 
     df_total = match_entity(df_total)
     
-    return df_total 
+    return df_total.fillna("") 
+
+def reorganise_to_json(df):
+    json_format = []
+    for country in df.country.unique():
+        data = df[df['country']==country]
+        country_dic = {
+            'country': country,
+            'squad': data.to_dict('records')
+        }
+        json_format.append(country_dic)
+    return json_format
 
 def match_entity(df_total):
     entity = pd.read_csv(entity_path)
@@ -41,7 +53,10 @@ def read_json_to_df(path):
 def main():
     data = read_json_to_df(PATH)
     # data.to_csv('players.csv')
-    data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
+    # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
+    data_json = reorganise_to_json(data)
+    with open(os.getcwd() + "/data/data.json",'w') as file:
+        json.dump(data_json,file)
     print('finish')
 
 main()
