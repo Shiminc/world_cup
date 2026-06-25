@@ -3,8 +3,8 @@ d3.json("../data/data.json")
     console.table(data)
     console.log(data.length)
 
-    plotMultiple(data)
-    
+    plotMultipleTeam(data)
+    handleTooltips()     
   })
 .catch(error => console.log(error));
 

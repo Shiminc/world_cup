@@ -1,14 +1,29 @@
-.grid-container{
+.plot-grid-container{
     display: grid;
     grid-template-columns: repeat(4,100px);
-    grid-gap: 10%;
+    grid-gap: 5%;
 }
+
 
 .country-name {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;  
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     
+}
+
+.panel-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-gap: 10%;
+}
+
+#toolTip-text {
+    z-index: 10000
+}
+
+#toolTip-background {
+    z-index: 100
 }

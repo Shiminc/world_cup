@@ -54,9 +54,9 @@ def main():
     data = read_json_to_df(PATH)
     # data.to_csv('players.csv')
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
-    data_json = reorganise_to_json(data)
-    with open(os.getcwd() + "/data/data.json",'w') as file:
-        json.dump(data_json,file)
+    # data_json = reorganise_to_json(data)
+    # with open(os.getcwd() + "/data/data.json",'w') as file:
+    #     json.dump(data_json,file)
     print('finish')
 
 main()

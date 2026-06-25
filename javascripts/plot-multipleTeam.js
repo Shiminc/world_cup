@@ -1,21 +1,19 @@
-const plotMultiple = (data) => {
+const plotMultipleTeam = (data) => {
 
-
-    const teamPlot = d3.select('.grid-container')
+    const teamPlot = d3.select('.plot-grid-container')
     .selectAll('div')
     .data(data)
     .join('div')
     .attr('class','grid-box-team')
 
-
-    const teamSVG = teamPlot
+    teamSVG = teamPlot
       .append('svg')
-      .attr("viewBox", `0, 0, ${teamChart.width + teamChartMargin*2}, ${teamChart.height + teamChartMargin*2}`)
+      .attr("viewBox", `0, 0, ${teamChart.width + teamChartMargin.left + teamChartMargin.right}, ${teamChart.height + teamChartMargin.bottom + teamChartMargin.top}`)
       .attr('class',d=>`svg-team ${d.country}`)
       .append('g')
-      .attr("transform", `translate(${teamChartMargin}, ${teamChartMargin})`)
+      .attr("transform", `translate(${teamChartMargin.left}, ${teamChartMargin.top})`)
 
-    const playerCircle = teamSVG.selectAll('circle')
+    playerCircle = teamSVG.selectAll('circle')
       .data(d=>d.squad)
       .join('circle')
       .attr('class','player-circle')

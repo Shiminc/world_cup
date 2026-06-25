@@ -8,22 +8,28 @@
 	<!-- <link rel="stylesheet" type="text/css" href="./css/visualization.css"> -->
 </head>
 <body>
-
-		<div class="grid-container"></div>
-		<!-- <div class="responsive-svg-container">
-			<div id="plot"></div>
-		</div> -->
-	
+	<div id="intro">
+		<h1>Where do World Cup 2026 players play in?</h1>
+	</div>
+	<div class="panel-container">
+		<div class="legend-panel"></div>
+		<div class="plot-grid-container"></div>
+		<div class="explanation-panel"></div>
+	</div>
 	<!-- Load your scripts here -->
 	<script src="./javascripts/d3.v7.js"></script>
     <script src="./javascripts/shared-constants.js"></script>
-
 	<script src="./javascripts/color.js"></script>
-	<script src="./javascripts/plot-multiple.js"></script>
+
+	<script src="./javascripts/plot-multipleTeam.js"></script>
+	<script src="./javascripts/plot-one-svg.js"></script>
+
+
+	<script src="./javascripts/toolTips.js"></script>
 
 	<!-- <script src="js/scatterplot.js"></script>
 	<script src="js/legend.js"></script>
-	<script src="js/interactions.js"></script> --> -->
+	<script src="js/interactions.js"></script> --> 
 	<script src="./javascripts/load-data.js"></script>
 </body>
 </html>

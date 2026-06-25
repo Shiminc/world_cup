@@ -16,48 +16,31 @@ country =
                'Portugal',             'Uzbekistan',                'Croatia',
                 'England',                  'Ghana',                 'Panama']
 
-// Chart
-
-// const chartArea = {
-//     'width' : 1000,
-//     'height' : 12000
-// }
-
-// const margin = {
-//     'left':50,
-//     'right':50,
-//     'top':50,
-//     'bottom':50
-// }
-
-// const innerChart = {
-//     'width' : chartArea.width - margin.left - margin.right,
-//     'height' : chartArea.height - margin.top - margin.bottom
-// }
 
 const teamChart = {
     'width' : 4,
     'height' : 7
 }
 
-const teamChartMargin = 1
+const teamChartMargin ={
+    'left':1,
+    'right':5, //to accomodate the tooltip
+    'top':1,
+    'bottom':1
+    }
 const width = 4;
 const height = 7;
 
-
-const rectPlayerDimension = 20;
 const teamDimension = {
     'width' : 4,
     'height' :7
-// plus 1 to leave space for caption
 }
 
-const teamPlotDimension = {
-    'width' : teamDimension.width*rectPlayerDimension,
-    'height' :teamDimension.height*rectPlayerDimension   
+// Tooltip
+const tooltip ={
+     'width' : 5,
+     'height' : 3
 }
-
-
 
 const xScale = d3.scaleBand()
         .domain(d3.range(width))
@@ -71,4 +54,5 @@ const yScale = d3.scaleBand()
         .round(true)
         // .paddingInner(0.1)
 
-
+let teamSVG
+let playerCircle
