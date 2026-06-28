@@ -1,8 +1,8 @@
 const plotMultipleTeam = (data) => {
-
+    sorted_data = d3.sort(data,(d)=>d.diversity_index)
     const teamPlot = d3.select('.plot-grid-container')
     .selectAll('div')
-    .data(data)
+    .data(sorted_data)
     .join('div')
     .attr('class','grid-box-team')
 
@@ -14,6 +14,7 @@ const plotMultipleTeam = (data) => {
       .attr("transform", `translate(${teamChartMargin.left}, ${teamChartMargin.top})`)
 
     playerCircle = teamSVG.selectAll('circle')
+      // .data(d=>d3.sort(d.squad,(x)=>x.player))
       .data(d=>d.squad)
       .join('circle')
       .attr('class','player-circle')

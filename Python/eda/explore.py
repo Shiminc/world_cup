@@ -1,9 +1,21 @@
 import pandas as pd
 import numpy as np
-import json,os
+import json,os, re, math
 
 PATH = os.getcwd() + "/data/all_squads.json"
 entity_path = os.getcwd() + "/data/entity.csv"
+
+def extract_age(birth_age_string):
+    if re.search(r'[0-9]{2}\)$',birth_age_string):
+        age = re.search(r'([0-9]{2})\)$',birth_age_string).group(1)
+    else:
+        age = 0
+    return age
+
+def rank_play_in(play_in_string, country_df):
+    ranking = country_df['play_in'].value_counts()
+    play_in_rank = ranking[play_in_string]
+    return play_in_rank
 
 
 def reorganise_dataframe(data_df):
@@ -12,9 +24,12 @@ def reorganise_dataframe(data_df):
         data = pd.DataFrame(data_df.iloc[i]['squad'])
         data['play_in'] = data['play_in'].apply(lambda x:x.rstrip('_'))
         data['play_in'] = data['play_in'].apply(lambda x:x.lstrip('the_'))
+        data['play_in_rank'] = data['play_in'].apply(rank_play_in, country_df=data)
         data['country'] = data_df.iloc[i]['country']
         data['local'] = data['play_in'] == data['country']
-        data.sort_values(by='play_in',inplace=True)
+        # "birth_age": "(2000-02-03) 3 February 2000 (age\u00a026)",
+        data['age'] = data['birth_age'].apply(extract_age)
+        data.sort_values(by=['play_in_rank','play_in'],ascending=False,inplace=True)
         if i==0:
             df_total = data
         else:
@@ -24,12 +39,24 @@ def reorganise_dataframe(data_df):
     
     return df_total.fillna("") 
 
+def calculate_shannon_diversity_index(data):
+#https://www.statology.org/shannon-diversity-index/
+
+    total_number_player = data.shape[0]     
+    play_in_df = data['play_in'].value_counts().to_frame()
+    play_in_df.reset_index(inplace=True)
+    play_in_df['proportion']=play_in_df['count']/total_number_player
+    play_in_df['index_part']= play_in_df['proportion']*play_in_df['proportion'].apply(math.log)
+    return -sum(play_in_df['index_part'])
+
 def reorganise_to_json(df):
     json_format = []
     for country in df.country.unique():
         data = df[df['country']==country]
+        index = calculate_shannon_diversity_index(data)
         country_dic = {
             'country': country,
+            'diversity_index': index,
             'squad': data.to_dict('records')
         }
         json_format.append(country_dic)
@@ -54,9 +81,9 @@ def main():
     data = read_json_to_df(PATH)
     # data.to_csv('players.csv')
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
-    # data_json = reorganise_to_json(data)
-    # with open(os.getcwd() + "/data/data.json",'w') as file:
-    #     json.dump(data_json,file)
+    data_json = reorganise_to_json(data)
+    with open(os.getcwd() + "/data/data.json",'w') as file:
+        json.dump(data_json,file)
     print('finish')
 
 main()

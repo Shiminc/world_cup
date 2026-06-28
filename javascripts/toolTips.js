@@ -44,7 +44,7 @@ function showTooltips(e,d) {
       .attr("text-anchor", "start")
 
     textContainer.append('tspan').attr('class','play_in')
-      .text(d.play_in)
+      .text(d.play_in.replaceAll("_"," "))
       .attr('x',cx)
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')
