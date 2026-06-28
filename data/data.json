@@ -2,6 +2,7 @@
   {
     "country": "Czech_Republic",
     "diversity_index": 1.1390158205385927,
+    "proportion_local": 0.6538461538461539,
     "squad": [
       {
         "player": "Jind\u0159ich Stan\u011bk",
@@ -424,6 +425,7 @@
   {
     "country": "Mexico",
     "diversity_index": 1.8979404902547297,
+    "proportion_local": 0.46153846153846156,
     "squad": [
       {
         "player": "Ra\u00fal Rangel",
@@ -846,6 +848,7 @@
   {
     "country": "South_Africa",
     "diversity_index": 1.0530721162798569,
+    "proportion_local": 0.7307692307692307,
     "squad": [
       {
         "player": "Ronwen Williams (captain)",
@@ -1268,6 +1271,7 @@
   {
     "country": "South_Korea",
     "diversity_index": 2.3740337111893424,
+    "proportion_local": 0.2692307692307692,
     "squad": [
       {
         "player": "Song Bum-keun",
@@ -1690,6 +1694,7 @@
   {
     "country": "Bosnia_and_Herzegovina",
     "diversity_index": 2.6112125994210036,
+    "proportion_local": 0.038461538461538464,
     "squad": [
       {
         "player": "Nikola Vasilj",
@@ -2112,6 +2117,7 @@
   {
     "country": "Canada",
     "diversity_index": 2.0846513489429594,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Dayne St. Clair",
@@ -2534,6 +2540,7 @@
   {
     "country": "Qatar",
     "diversity_index": 0.16302362949436594,
+    "proportion_local": 0.9615384615384616,
     "squad": [
       {
         "player": "Mahmud Abunada",
@@ -2956,6 +2963,7 @@
   {
     "country": "Switzerland",
     "diversity_index": 1.6776086627680635,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Gregor Kobel",
@@ -3378,6 +3386,7 @@
   {
     "country": "Brazil",
     "diversity_index": 1.8277744156205078,
+    "proportion_local": 0.2692307692307692,
     "squad": [
       {
         "player": "Alisson",
@@ -3800,6 +3809,7 @@
   {
     "country": "Haiti",
     "diversity_index": 2.4791249146483794,
+    "proportion_local": 0.038461538461538464,
     "squad": [
       {
         "player": "Duke Lacroix",
@@ -4222,6 +4232,7 @@
   {
     "country": "Morocco",
     "diversity_index": 2.3419551657809494,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Achraf Hakimi (captain)",
@@ -4644,6 +4655,7 @@
   {
     "country": "Scotland",
     "diversity_index": 1.3446254227561352,
+    "proportion_local": 0.3076923076923077,
     "squad": [
       {
         "player": "Angus Gunn",
@@ -5066,6 +5078,7 @@
   {
     "country": "Australia",
     "diversity_index": 2.428468264953074,
+    "proportion_local": 0.19230769230769232,
     "squad": [
       {
         "player": "Patrick Beach",
@@ -5488,6 +5501,7 @@
   {
     "country": "Paraguay",
     "diversity_index": 2.044401491730302,
+    "proportion_local": 0.11538461538461539,
     "squad": [
       {
         "player": "Fabi\u00e1n Balbuena",
@@ -5910,6 +5924,7 @@
   {
     "country": "Turkey",
     "diversity_index": 1.3889149568806474,
+    "proportion_local": 0.5769230769230769,
     "squad": [
       {
         "player": "Mert G\u00fcnok",
@@ -6332,6 +6347,7 @@
   {
     "country": "United_States",
     "diversity_index": 2.0645264203366307,
+    "proportion_local": 0.2692307692307692,
     "squad": [
       {
         "player": "Matt Turner",
@@ -6754,6 +6770,7 @@
   {
     "country": "Curacao",
     "diversity_index": 1.8043716191528454,
+    "proportion_local": 0.0,
     "squad": [
       {
         "player": "Tyrick Bodak",
@@ -7176,6 +7193,7 @@
   {
     "country": "Ecuador",
     "diversity_index": 2.2483862946790656,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "F\u00e9lix Torres",
@@ -7598,6 +7616,7 @@
   {
     "country": "Germany",
     "diversity_index": 0.7968838393163717,
+    "proportion_local": 0.7307692307692307,
     "squad": [
       {
         "player": "Manuel Neuer",
@@ -8020,6 +8039,7 @@
   {
     "country": "Ivory_Coast",
     "diversity_index": 2.2614554513556344,
+    "proportion_local": 0.0,
     "squad": [
       {
         "player": "Yahia Fofana",
@@ -8442,6 +8462,7 @@
   {
     "country": "Japan",
     "diversity_index": 2.02204108244559,
+    "proportion_local": 0.11538461538461539,
     "squad": [
       {
         "player": "Yukinari Sugawara",
@@ -8864,6 +8885,7 @@
   {
     "country": "Netherlands",
     "diversity_index": 1.429164814093305,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Bart Verbruggen",
@@ -9286,6 +9308,7 @@
   {
     "country": "Sweden",
     "diversity_index": 1.9258098471497849,
+    "proportion_local": 0.11538461538461539,
     "squad": [
       {
         "player": "Jacob Widell Zetterstr\u00f6m",
@@ -9708,6 +9731,7 @@
   {
     "country": "Tunisia",
     "diversity_index": 2.2711735874793155,
+    "proportion_local": 0.23076923076923078,
     "squad": [
       {
         "player": "Mouhib Chamakh",
@@ -10130,6 +10154,7 @@
   {
     "country": "Belgium",
     "diversity_index": 1.881782085868701,
+    "proportion_local": 0.11538461538461539,
     "squad": [
       {
         "player": "Senne Lammens",
@@ -10552,6 +10577,7 @@
   {
     "country": "Egypt",
     "diversity_index": 1.2989728622062724,
+    "proportion_local": 0.6538461538461539,
     "squad": [
       {
         "player": "Mohamed El Shenawy (fifth captain)",
@@ -10974,6 +11000,7 @@
   {
     "country": "Iran",
     "diversity_index": 1.0427845852427873,
+    "proportion_local": 0.6538461538461539,
     "squad": [
       {
         "player": "Alireza Beiranvand",
@@ -11396,6 +11423,7 @@
   {
     "country": "New_Zealand",
     "diversity_index": 2.2711735874793155,
+    "proportion_local": 0.23076923076923078,
     "squad": [
       {
         "player": "Michael Woud",
@@ -11818,6 +11846,7 @@
   {
     "country": "Cape_Verde",
     "diversity_index": 2.418061472470426,
+    "proportion_local": 0.0,
     "squad": [
       {
         "player": "Vozinha (vice-captain)",
@@ -12240,6 +12269,7 @@
   {
     "country": "Saudi_Arabia",
     "diversity_index": 0.16302362949436594,
+    "proportion_local": 0.9615384615384616,
     "squad": [
       {
         "player": "Nawaf Al-Aqidi",
@@ -12662,6 +12692,7 @@
   {
     "country": "Spain",
     "diversity_index": 0.8817120037006025,
+    "proportion_local": 0.6538461538461539,
     "squad": [
       {
         "player": "Joan Garcia",
@@ -13084,6 +13115,7 @@
   {
     "country": "Uruguay",
     "diversity_index": 2.074244556460312,
+    "proportion_local": 0.0,
     "squad": [
       {
         "player": "Sergio Rochet",
@@ -13506,6 +13538,7 @@
   {
     "country": "France",
     "diversity_index": 1.724914291910481,
+    "proportion_local": 0.3076923076923077,
     "squad": [
       {
         "player": "Brice Samba",
@@ -13928,6 +13961,7 @@
   {
     "country": "Iraq",
     "diversity_index": 2.265848859091473,
+    "proportion_local": 0.38461538461538464,
     "squad": [
       {
         "player": "Fahad Talib",
@@ -14350,6 +14384,7 @@
   {
     "country": "Norway",
     "diversity_index": 1.741334469139938,
+    "proportion_local": 0.15384615384615385,
     "squad": [
       {
         "player": "Egil Selvik",
@@ -14772,6 +14807,7 @@
   {
     "country": "Senegal",
     "diversity_index": 1.807649487014179,
+    "proportion_local": 0.0,
     "squad": [
       {
         "player": "Yehvann Diouf",
@@ -15194,6 +15230,7 @@
   {
     "country": "Algeria",
     "diversity_index": 2.395274179670176,
+    "proportion_local": 0.11538461538461539,
     "squad": [
       {
         "player": "A\u00efssa Mandi (vice-captain)",
@@ -15616,6 +15653,7 @@
   {
     "country": "Argentina",
     "diversity_index": 1.94748160007553,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Juan Musso",
@@ -16038,6 +16076,7 @@
   {
     "country": "Austria",
     "diversity_index": 1.6569836979546422,
+    "proportion_local": 0.11538461538461539,
     "squad": [
       {
         "player": "Stefan Posch",
@@ -16460,6 +16499,7 @@
   {
     "country": "Jordan",
     "diversity_index": 1.7483902410696976,
+    "proportion_local": 0.46153846153846156,
     "squad": [
       {
         "player": "Yazeed Abulaila",
@@ -16882,6 +16922,7 @@
   {
     "country": "Colombia",
     "diversity_index": 2.395274179670176,
+    "proportion_local": 0.038461538461538464,
     "squad": [
       {
         "player": "\u00c1lvaro Montero",
@@ -17304,6 +17345,7 @@
   {
     "country": "DR_Congo",
     "diversity_index": 2.3322370296572688,
+    "proportion_local": 0.0,
     "squad": [
       {
         "player": "Lionel Mpasi",
@@ -17726,6 +17768,7 @@
   {
     "country": "Portugal",
     "diversity_index": 1.8322409760479006,
+    "proportion_local": 0.19230769230769232,
     "squad": [
       {
         "player": "Jos\u00e9 S\u00e1",
@@ -18148,6 +18191,7 @@
   {
     "country": "Uzbekistan",
     "diversity_index": 1.1585300677353174,
+    "proportion_local": 0.6153846153846154,
     "squad": [
       {
         "player": "Utkir Yusupov",
@@ -18570,6 +18614,7 @@
   {
     "country": "Croatia",
     "diversity_index": 1.9578883925581776,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Marin Pongra\u010di\u0107",
@@ -18992,6 +19037,7 @@
   {
     "country": "England",
     "diversity_index": 0.6924211566971873,
+    "proportion_local": 0.8076923076923077,
     "squad": [
       {
         "player": "Jordan Pickford",
@@ -19414,6 +19460,7 @@
   {
     "country": "Ghana",
     "diversity_index": 2.3076455406235468,
+    "proportion_local": 0.038461538461538464,
     "squad": [
       {
         "player": "Alidu Seidu",
@@ -19836,6 +19883,7 @@
   {
     "country": "Panama",
     "diversity_index": 2.811419498301341,
+    "proportion_local": 0.07692307692307693,
     "squad": [
       {
         "player": "Jos\u00e9 Luis Rodr\u00edguez",

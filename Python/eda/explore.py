@@ -49,14 +49,17 @@ def calculate_shannon_diversity_index(data):
     play_in_df['index_part']= play_in_df['proportion']*play_in_df['proportion'].apply(math.log)
     return -sum(play_in_df['index_part'])
 
+
 def reorganise_to_json(df):
     json_format = []
     for country in df.country.unique():
         data = df[df['country']==country]
         index = calculate_shannon_diversity_index(data)
+        proportion_local = (data['local']).mean()
         country_dic = {
             'country': country,
             'diversity_index': index,
+            'proportion_local':proportion_local,
             'squad': data.to_dict('records')
         }
         json_format.append(country_dic)
