@@ -31,9 +31,10 @@ const colorEntity = [
     {'entity':'CAF','color':'#b07AA1'},      
     {'entity':'CONCACAF','color':'#499894'},
     {'entity':'CONMEBOL','color':'#86BCB6'}, 
-    {'entity':'UNATTACHED','color':'#C8D0D9'},
     {'entity':'OFC','color':'#D7B5A6'},
     {'entity':'UEFA','color':'#9c755f'},
+    {'entity':'UNATTACHED','color':'#C8D0D9'},
+
     // {'entity':'AFC_11_22','color':'#B6992D'},
     // {'entity':'AFC_1_10','color':'#F1CE63'},
     // {'entity':'CAF_11_20','color':'#499894'},
@@ -41,6 +42,15 @@ const colorEntity = [
 
 ]
 
+AFC_country = ["Jordan","South Korea","Japan","Australia","Malaysia","Thailand","China","Indonesia"]
+CAF_country = ["Tunisia","Algeria","Morocco","Ghana"]
+CONCACAF_country = ["Canada","Costa Rica","Panama","Haiti","Honduras"]
+CONMEBOL_country = ["Ecuador","Paraguay","Venezuela","Chile","Uruguay","Colombia"]
+OFC_country = ["New Zealand"]
+UEFA_country = ["Denmark","Russia","Greece","Switzerland","Cyprus","Austria","Norway","Wales",
+"Wales","Croatia","Israel","Sweden","Serbia","Hungary","Romania","Poland","Azerbaijan","Slovakia",
+"Ireland","Slovenia","Bulgaria","Armenia","Bosnia and Herzegovina","Kazakhstan","Finland"    
+]
 const colorScale = d3.scaleOrdinal()
         .domain(colorEntity.map(d => d.entity))
         .range(colorEntity.map(d => d.color))
