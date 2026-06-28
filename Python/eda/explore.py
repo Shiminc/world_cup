@@ -30,7 +30,7 @@ def extract_age(birth_age_string):
         age = re.search(r'([0-9]{2})\)$',birth_age_string).group(1)
     else:
         age = 0
-    return age
+    return int(age)
 
 def rank_play_in(play_in_string, country_df):
     ranking = country_df['play_in'].value_counts()
@@ -83,6 +83,7 @@ def reorganise_to_json(df):
             'diversity_index': index,
             'proportion_local':proportion_local,
             'proportion_big_five':proportion_big_five,
+            'mean_age': data['age'].mean(),
             'squad': data.to_dict('records')
         }
         json_format.append(country_dic)
