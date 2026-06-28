@@ -4,6 +4,26 @@ import json,os, re, math
 
 PATH = os.getcwd() + "/data/all_squads.json"
 entity_path = os.getcwd() + "/data/entity.csv"
+league_path = os.getcwd() + "/data/league.json"
+
+with open(league_path, 'r') as json_file:
+        league_data = json.load(json_file)
+
+
+def determine_league(club_name):
+    if club_name in league_data['premier_league']:
+        league = 'Premier_League'
+    elif club_name in league_data['la_liga']:
+        league = 'La_Liga'
+    elif club_name in league_data['ligue_1']:
+        league = 'Ligue_1'
+    elif club_name in league_data['serie_A']:
+        league = 'Serie_A'
+    elif club_name in league_data['bundesliga']:
+        league = 'Bundesliga'
+    else:
+        league = 'non_big_five'
+    return league
 
 def extract_age(birth_age_string):
     if re.search(r'[0-9]{2}\)$',birth_age_string):
@@ -29,6 +49,7 @@ def reorganise_dataframe(data_df):
         data['local'] = data['play_in'] == data['country']
         # "birth_age": "(2000-02-03) 3 February 2000 (age\u00a026)",
         data['age'] = data['birth_age'].apply(extract_age)
+        data['league'] = data['club'].apply(determine_league)
         data.sort_values(by=['play_in_rank','play_in'],ascending=False,inplace=True)
         if i==0:
             df_total = data
@@ -56,10 +77,12 @@ def reorganise_to_json(df):
         data = df[df['country']==country]
         index = calculate_shannon_diversity_index(data)
         proportion_local = (data['local']).mean()
+        proportion_big_five = sum(data['league']!='non_big_five')/data.shape[0]
         country_dic = {
             'country': country,
             'diversity_index': index,
             'proportion_local':proportion_local,
+            'proportion_big_five':proportion_big_five,
             'squad': data.to_dict('records')
         }
         json_format.append(country_dic)
@@ -76,12 +99,17 @@ def read_json_to_df(path):
     
     # read into the df
     data_df = pd.DataFrame(data)
+
     # reorganised data and incorporate country into variable
+
     data = reorganise_dataframe(data_df)
+
     return data
 
 def main():
     data = read_json_to_df(PATH)
+
+
     # data.to_csv('players.csv')
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
     data_json = reorganise_to_json(data)

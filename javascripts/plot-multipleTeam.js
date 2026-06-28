@@ -1,6 +1,7 @@
 const plotMultipleTeam = (data) => {
     sorted_data = d3.sort(data,(d)=>d.diversity_index)
     sorted_data = d3.sort(data,(d)=>-d.proportion_local)
+    sorted_data = d3.sort(data,(d)=>-d.proportion_big_five)
 
     const teamPlot = d3.select('.plot-grid-container')
     .selectAll('div')
