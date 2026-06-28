@@ -4,7 +4,8 @@ d3.json("../data/data.json")
     console.log(data.length)
 
     plotMultipleTeam(data)
-    handleTooltips()     
+    handleTooltips()  
+    create_legend_play_in()   
   })
 .catch(error => console.log(error));
 
