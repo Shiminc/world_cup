@@ -1,4 +1,5 @@
 const colorEntity = [
+    {'entity':'All','color':'#FFFFFF'},
     {'entity':'England','color':'#FFFFFF'},
     {'entity':'Germany','color':'#FFCE00'},
     {'entity':'Spain','color':'#E60026'},

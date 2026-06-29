@@ -20,7 +20,7 @@ const plotMultipleTeam = (data) => {
       // .data(d=>d3.sort(d.squad,(x)=>x.player))
       .data(d=>d.squad)
       .join('circle')
-      .attr('class','player-circle')
+      .attr('class',d=>`player-circle ${d.play_in}`)
       .attr('fill',d => colorScale(d.play_in_entity))
       .attr('cx',(d,i) => xScale(i%teamDimension.width))
       .attr('cy',(d,i) => yScale(Math.floor(i/teamDimension.width)))

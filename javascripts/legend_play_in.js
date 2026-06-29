@@ -33,7 +33,7 @@ const create_legend_play_in = () => {
                 if (d.entity === 'England')
                     return 0.3
                 else
-                    return 0.05
+                    return 0.0
             })
             .attr('stroke','black')
 
@@ -44,7 +44,8 @@ const create_legend_play_in = () => {
         .text(d => d.entity.replaceAll("_"," "))
         .attr('font-size','12px')
         .style('font-family','sans-serif')
-        .attr('class',d=>`legend-entity-text-${d.entity}`)
+        .attr('class',`legend-entity-text`)
+        .attr('id',d=>d.entity)
     
     
     const bar_entity = legend_svg.append('rect')
@@ -65,7 +66,22 @@ const create_legend_play_in = () => {
                     return 0.05
             })
             .attr('stroke','black')
-
+    const label_entity = legend_svg.append('text')
+            .attr('x',d=>{
+                if (play_in_total.find(e=>e.play_in === d.entity)){
+                    const element = (play_in_total.find(e=>e.play_in === d.entity))
+                    return barWidthScale(element.count) + 160
+                }
+            })
+            .attr('y',12)
+            .text(d=>{
+                if (play_in_total.find(e=>e.play_in === d.entity)){
+                    const element = (play_in_total.find(e=>e.play_in === d.entity))
+                    return element.count
+                }
+            })
+        .attr('font-size','12px')
+        .style('font-family','sans-serif')
     // add countries under federation
     //     federation.forEach((element) => {
     //                 console.log(element.countries)

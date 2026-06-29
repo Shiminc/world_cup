@@ -27,6 +27,7 @@ li {
 
 }
 
+.legend-entity-text,
 .player-circle {
     cursor:pointer;
 }
