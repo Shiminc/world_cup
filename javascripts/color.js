@@ -42,6 +42,7 @@ const colorEntity = [
 
 ]
 
+
 AFC_country = ["Jordan","South Korea","Japan","Australia","Malaysia","Thailand","China","Indonesia"]
 CAF_country = ["Tunisia","Algeria","Morocco","Ghana"]
 CONCACAF_country = ["Canada","Costa Rica","Panama","Haiti","Honduras"]

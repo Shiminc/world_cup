@@ -1,3 +1,7 @@
+function showHyperlink(e,d){
+    window.open(`https://en.wikipedia.org/wiki/${d.player}`,"_blank")
+
+}
 
 function hideTooltips(e,d) {
     //remove the tooltips
@@ -50,6 +54,12 @@ function showTooltips(e,d) {
       .attr('dy','1.2em')
       .attr("text-anchor", "start")
 
+    textContainer.append('tspan').attr('class','age')
+      .text(`${d.age} year old`)
+      .attr('x',cx)
+      .attr('transform',`translateX (${r})`)  
+      .attr('dy','1.2em')
+      .attr("text-anchor", "start")
     //get the dimension of the rect-background based on the space text takes on
     let text = this.parentNode.querySelector('text');
     let box = text.getBBox();
@@ -69,6 +79,6 @@ function handleTooltips () {
     const playerToolTips = d3.selectAll('.player-circle')
     .on('mouseenter',showTooltips)
     .on('mouseleave',hideTooltips)
-    // .on('click',showHyperlink)
+    .on('click',showHyperlink)
 
 }

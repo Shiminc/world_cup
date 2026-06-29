@@ -26,16 +26,17 @@ const create_legend_play_in = () => {
         .attr('x',18)
         .attr('y',12)
         .text(d => d.entity.replaceAll("_"," "))
-        .attr('font-size','10px')
+        .attr('font-size','12px')
+        .style('font-family','sans-serif')
         .attr('class',d=>`legend-entity-text-${d.entity}`)
     
     const afc_legend = d3.select(".legend-entity-text-AFC")
-            .selectAll('tspan')
+
+        afc_legend.selectAll('tspan')
             .data(AFC_country) 
             .join('tspan')
-                .attr('x',0)
+                .attr('x', 18)
                 .attr('dy','1.2em')
-
-    afc_legend.text(d=>d)
+                .text(d=>d)
 
     };

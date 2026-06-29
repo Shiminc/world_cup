@@ -4,7 +4,6 @@
     grid-gap: 5%;
 }
 
-.legend-entity,
 .country-name {
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -26,4 +25,8 @@ li {
     list-style: none;
     margin-inline-start: 0;
 
+}
+
+.player-circle {
+    cursor:pointer;
 }
