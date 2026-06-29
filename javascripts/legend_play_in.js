@@ -12,16 +12,23 @@ const create_legend_play_in = () => {
             .attr("height", 20)
             .attr('class',d=>`legend-svg-${d.entity}`)
 
-    //create larger svg area for federation
-    federation.forEach((element) => {
-        d3.select(`.legend-svg-${element.entity}`).attr('height',element.countries.length*17+20)
-    })
+    // //create larger svg area for federation
+    // federation.forEach((element) => {
+    //     d3.select(`.legend-svg-${element.entity}`).attr('height',element.countries.length*17+20)
+    // })
     
     legend_svg.append('circle')
             .attr("cx", 10)
             .attr("cy", 10)
             .attr("r", 3)
-            .attr("fill", d => d.color)
+            .attr("fill", d => { 
+                if (play_in_total.find(e=>e.play_in === d.entity)){
+                    const element = (play_in_total.find(e=>e.play_in === d.entity))
+                    if (element.count <15){
+                        return 'white'
+                    }
+                }
+                return d.color})
             .attr('stroke-width', d=> {
                 if (d.entity === 'England')
                     return 0.3
@@ -60,16 +67,16 @@ const create_legend_play_in = () => {
             .attr('stroke','black')
 
     // add countries under federation
-        federation.forEach((element) => {
-                    console.log(element.countries)
+    //     federation.forEach((element) => {
+    //                 console.log(element.countries)
 
-        d3.select(`.legend-entity-text-${element.entity}`)
-            .selectAll('tspan')
-            .data(element.countries) 
-            .join('tspan')
-                .attr('x', 18)
-                .attr('dy','1.3em')
-                .text(d=>d)
-    })    
+    //     d3.select(`.legend-entity-text-${element.entity}`)
+    //         .selectAll('tspan')
+    //         .data(element.countries) 
+    //         .join('tspan')
+    //             .attr('x', 18)
+    //             .attr('dy','1.3em')
+    //             .text(d=>d)
+    // })    
 
     };
