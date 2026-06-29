@@ -42,7 +42,23 @@ const colorEntity = [
 
 ]
 
-
+const federation = [
+    {'entity':'AFC',
+    'countries': ["Jordan","South Korea","Japan","Australia","Malaysia","Thailand","China","Indonesia"]},
+    {'entity':'CAF',
+    'countries': ["Tunisia","Algeria","Morocco","Ghana"]},
+    {'entity':'CONCACAF',
+    'countries':["Canada","Costa Rica","Panama","Haiti","Honduras"]},
+    {'entity':'CONMEBOL',
+    'countries':["Ecuador","Paraguay","Venezuela","Chile","Uruguay","Colombia"]},
+    {'entity':'OFC',
+    'countries':["New Zealand"]},
+    {'entity':'UEFA',
+    'countries': ["Denmark","Russia","Greece","Switzerland","Cyprus","Austria","Norway","Wales",
+"Wales","Croatia","Israel","Sweden","Serbia","Hungary","Romania","Poland","Azerbaijan","Slovakia",
+"Ireland","Slovenia","Bulgaria","Armenia","Bosnia and Herzegovina","Kazakhstan","Finland"    
+]}
+]
 AFC_country = ["Jordan","South Korea","Japan","Australia","Malaysia","Thailand","China","Indonesia"]
 CAF_country = ["Tunisia","Algeria","Morocco","Ghana"]
 CONCACAF_country = ["Canada","Costa Rica","Panama","Haiti","Honduras"]

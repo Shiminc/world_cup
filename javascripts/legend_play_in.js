@@ -8,11 +8,15 @@ const create_legend_play_in = () => {
 
     const legend_svg = legend_play_in
         .append('svg')
-            .attr("width", 120)
+            .attr("width", 150)
             .attr("height", 20)
             .attr('class',d=>`legend-svg-${d.entity}`)
 
-    d3.select('.legend-svg-AFC').attr('height',100)
+    //create larger svg area for federation
+    federation.forEach((element) => {
+        d3.select(`.legend-svg-${element.entity}`).attr('height',element.countries.length*17+20)
+    })
+    
     legend_svg.append('circle')
             .attr("cx", 10)
             .attr("cy", 10)
@@ -30,13 +34,17 @@ const create_legend_play_in = () => {
         .style('font-family','sans-serif')
         .attr('class',d=>`legend-entity-text-${d.entity}`)
     
-    const afc_legend = d3.select(".legend-entity-text-AFC")
+    // add countries under federation
+        federation.forEach((element) => {
+                    console.log(element.countries)
 
-        afc_legend.selectAll('tspan')
-            .data(AFC_country) 
+        d3.select(`.legend-entity-text-${element.entity}`)
+            .selectAll('tspan')
+            .data(element.countries) 
             .join('tspan')
                 .attr('x', 18)
-                .attr('dy','1.2em')
+                .attr('dy','1.3em')
                 .text(d=>d)
+    })    
 
     };
