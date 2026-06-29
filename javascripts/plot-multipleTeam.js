@@ -26,7 +26,7 @@ const plotMultipleTeam = (data) => {
       .attr('cy',(d,i) => yScale(Math.floor(i/teamDimension.width)))
       .attr('r',xScale.bandwidth()/3)
       .attr('r',xScale.bandwidth()/3)
-      .attr('stroke-width',0.01)
+            .attr('stroke-width', 0.05)
       .attr('stroke','black')
 
     teamPlot

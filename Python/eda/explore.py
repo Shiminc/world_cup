@@ -109,8 +109,8 @@ def read_json_to_df(path):
 
 def main():
     data = read_json_to_df(PATH)
-
-
+    play_in_numbers = pd.DataFrame(data.play_in.value_counts()).reset_index()
+    play_in_numbers.to_json('trial.json',orient='records')
     # data.to_csv('players.csv')
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
     data_json = reorganise_to_json(data)

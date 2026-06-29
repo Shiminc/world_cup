@@ -8,7 +8,7 @@ const create_legend_play_in = () => {
 
     const legend_svg = legend_play_in
         .append('svg')
-            .attr("width", 150)
+            .attr("width", 350)
             .attr("height", 20)
             .attr('class',d=>`legend-svg-${d.entity}`)
 
@@ -22,7 +22,12 @@ const create_legend_play_in = () => {
             .attr("cy", 10)
             .attr("r", 3)
             .attr("fill", d => d.color)
-            .attr('stroke-width',0.09)
+            .attr('stroke-width', d=> {
+                if (d.entity === 'England')
+                    return 0.3
+                else
+                    return 0.05
+            })
             .attr('stroke','black')
 
     legend_svg
@@ -34,6 +39,26 @@ const create_legend_play_in = () => {
         .style('font-family','sans-serif')
         .attr('class',d=>`legend-entity-text-${d.entity}`)
     
+    
+    const bar_entity = legend_svg.append('rect')
+            .attr('x',150)
+            .attr('y',0)
+            .attr('width',d=>{
+                if (play_in_total.find(e=>e.play_in === d.entity)){
+                    const element = (play_in_total.find(e=>e.play_in === d.entity))
+                    return barWidthScale(element.count)
+                }
+            })
+            .attr('height',18)
+            .attr("fill", d => d.color)
+                        .attr('stroke-width', d=> {
+            if (d.entity === 'England')
+                    return 0.3
+                else
+                    return 0.05
+            })
+            .attr('stroke','black')
+
     // add countries under federation
         federation.forEach((element) => {
                     console.log(element.countries)
