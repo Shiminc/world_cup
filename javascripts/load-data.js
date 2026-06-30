@@ -1,5 +1,7 @@
+let dataset
 d3.json("../data/data.json")
 .then(data => {
+    dataset = data
     console.table(data)
     console.log(data.length)
 
@@ -7,6 +9,7 @@ d3.json("../data/data.json")
     handleTooltips()  
     create_legend_play_in()
     listenForSelection()  
+    create_sort()
   })
 .catch(error => console.log(error));
 

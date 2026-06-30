@@ -1,4 +1,9 @@
 const create_legend_play_in = () => {
+    //to add label
+    d3.select('.legend-panel')
+    .append('div')
+    .text('')
+
     const legend_play_in = d3.select('.legend-panel')
         .append('ul')
         .selectAll('li')

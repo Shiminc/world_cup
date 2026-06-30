@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4,100px);
     grid-gap: 5%;
+
 }
 
 .country-name {
@@ -30,4 +31,20 @@ li {
 .legend-entity-text,
 .player-circle {
     cursor:pointer;
+}
+
+
+
+.sort-container{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.sort-button{
+  width: fit-content;
+  background-color: powderblue;
+  padding: 0.3%;
+  margin: 0.3%;
+  cursor: pointer;
+  border-radius: 4px;
 }

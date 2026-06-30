@@ -1,8 +1,8 @@
 const plotMultipleTeam = (data) => {
-    sorted_data = d3.sort(data,(d)=>d.diversity_index)
-    sorted_data = d3.sort(data,(d)=>-d.proportion_local)
-    sorted_data = d3.sort(data,(d)=>-d.proportion_big_five)
-
+    // sorted_data = d3.sort(data,(d)=>-d.diversity_index)
+    // sorted_data = d3.sort(data,(d)=>-d.proportion_local)
+    // sorted_data = d3.sort(data,(d)=>-d.proportion_big_five)
+    sorted_data = data
     const teamPlot = d3.select('.plot-grid-container')
     .selectAll('div')
     .data(sorted_data)
@@ -21,7 +21,7 @@ const plotMultipleTeam = (data) => {
       .data(d=>d.squad)
       .join('circle')
       .attr('class',d=>`player-circle ${d.play_in}`)
-      .attr('fill',d => colorScale(d.play_in_entity))
+      .attr('fill',d => colorScale(d.play_in))
       .attr('cx',(d,i) => xScale(i%teamDimension.width))
       .attr('cy',(d,i) => yScale(Math.floor(i/teamDimension.width)))
       .attr('r',xScale.bandwidth()/3)
