@@ -49,6 +49,8 @@ def reorganise_dataframe(data_df):
         data['local'] = data['play_in'] == data['country']
         # "birth_age": "(2000-02-03) 3 February 2000 (age\u00a026)",
         data['age'] = data['birth_age'].apply(extract_age)
+        data['club'] = data['club'].apply(lambda x:x.replace('[a]',''))
+
         data['league'] = data['club'].apply(determine_league)
         data.sort_values(by=['play_in_rank','play_in'],ascending=False,inplace=True)
         if i==0:

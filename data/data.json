@@ -3160,7 +3160,7 @@
     "country": "Switzerland",
     "diversity_index": 1.6776086627680635,
     "proportion_local": 0.07692307692307693,
-    "proportion_big_five": 0.7307692307692307,
+    "proportion_big_five": 0.7692307692307693,
     "mean_age": 27.807692307692307,
     "squad": [
       {
@@ -3545,12 +3545,12 @@
         "caps": "66",
         "goals": "3",
         "play_in": "France",
-        "club": "Monaco[a]",
+        "club": "Monaco",
         "play_in_rank": 3,
         "country": "Switzerland",
         "local": false,
         "age": 29,
-        "league": "non_big_five",
+        "league": "Ligue_1",
         "play_in_region": "UEFA",
         "play_in_entity": "France"
       },
@@ -5866,7 +5866,7 @@
     "country": "Paraguay",
     "diversity_index": 2.044401491730302,
     "proportion_local": 0.11538461538461539,
-    "proportion_big_five": 0.07692307692307693,
+    "proportion_big_five": 0.11538461538461539,
     "mean_age": 28.576923076923077,
     "squad": [
       {
@@ -6205,7 +6205,7 @@
         "country": "Paraguay",
         "local": false,
         "age": 23,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -6317,7 +6317,7 @@
     "country": "Turkey",
     "diversity_index": 1.3889149568806474,
     "proportion_local": 0.5769230769230769,
-    "proportion_big_five": 0.3076923076923077,
+    "proportion_big_five": 0.34615384615384615,
     "mean_age": 27.23076923076923,
     "squad": [
       {
@@ -6707,7 +6707,7 @@
         "country": "Turkey",
         "local": false,
         "age": 26,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -6768,7 +6768,7 @@
     "country": "United_States",
     "diversity_index": 2.0645264203366307,
     "proportion_local": 0.2692307692307692,
-    "proportion_big_five": 0.46153846153846156,
+    "proportion_big_five": 0.5,
     "mean_age": 26.423076923076923,
     "squad": [
       {
@@ -7051,12 +7051,12 @@
         "caps": "29",
         "goals": "11",
         "play_in": "France",
-        "club": "Monaco[a]",
+        "club": "Monaco",
         "play_in_rank": 3,
         "country": "United_States",
         "local": false,
         "age": 24,
-        "league": "non_big_five",
+        "league": "Ligue_1",
         "play_in_region": "UEFA",
         "play_in_entity": "France"
       },
@@ -8121,7 +8121,7 @@
     "country": "Germany",
     "diversity_index": 0.7968838393163717,
     "proportion_local": 0.7307692307692307,
-    "proportion_big_five": 0.9230769230769231,
+    "proportion_big_five": 0.9615384615384616,
     "mean_age": 27.692307692307693,
     "squad": [
       {
@@ -8460,7 +8460,7 @@
         "country": "Germany",
         "local": false,
         "age": 35,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -8572,7 +8572,7 @@
     "country": "Ivory_Coast",
     "diversity_index": 2.2614554513556344,
     "proportion_local": 0.0,
-    "proportion_big_five": 0.38461538461538464,
+    "proportion_big_five": 0.4230769230769231,
     "mean_age": 25.384615384615383,
     "squad": [
       {
@@ -8787,12 +8787,12 @@
         "caps": "30",
         "goals": "5",
         "play_in": "France",
-        "club": "Monaco[a]",
+        "club": "Monaco",
         "play_in_rank": 3,
         "country": "Ivory_Coast",
         "local": false,
         "age": 24,
-        "league": "non_big_five",
+        "league": "Ligue_1",
         "play_in_region": "UEFA",
         "play_in_entity": "France"
       },
@@ -9474,7 +9474,7 @@
     "country": "Netherlands",
     "diversity_index": 1.429164814093305,
     "proportion_local": 0.07692307692307693,
-    "proportion_big_five": 0.6923076923076923,
+    "proportion_big_five": 0.7692307692307693,
     "mean_age": 27.423076923076923,
     "squad": [
       {
@@ -9490,7 +9490,7 @@
         "country": "Netherlands",
         "local": false,
         "age": 23,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -9592,7 +9592,7 @@
         "country": "Netherlands",
         "local": false,
         "age": 26,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -9925,7 +9925,7 @@
     "country": "Sweden",
     "diversity_index": 1.9258098471497849,
     "proportion_local": 0.11538461538461539,
-    "proportion_big_five": 0.38461538461538464,
+    "proportion_big_five": 0.4230769230769231,
     "mean_age": 27.03846153846154,
     "squad": [
       {
@@ -10043,7 +10043,7 @@
         "country": "Sweden",
         "local": false,
         "age": 22,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -10827,7 +10827,7 @@
     "country": "Belgium",
     "diversity_index": 1.881782085868701,
     "proportion_local": 0.11538461538461539,
-    "proportion_big_five": 0.6153846153846154,
+    "proportion_big_five": 0.6538461538461539,
     "mean_age": 27.153846153846153,
     "squad": [
       {
@@ -10860,7 +10860,7 @@
         "country": "Belgium",
         "local": false,
         "age": 25,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },
@@ -15788,7 +15788,7 @@
     "country": "Senegal",
     "diversity_index": 1.807649487014179,
     "proportion_local": 0.0,
-    "proportion_big_five": 0.6538461538461539,
+    "proportion_big_five": 0.7307692307692307,
     "mean_age": 26.692307692307693,
     "squad": [
       {
@@ -15833,12 +15833,12 @@
         "caps": "62",
         "goals": "2",
         "play_in": "France",
-        "club": "Monaco[a]",
+        "club": "Monaco",
         "play_in_rank": 8,
         "country": "Senegal",
         "local": false,
         "age": 27,
-        "league": "non_big_five",
+        "league": "Ligue_1",
         "play_in_region": "UEFA",
         "play_in_entity": "France"
       },
@@ -15884,12 +15884,12 @@
         "caps": "34",
         "goals": "5",
         "play_in": "France",
-        "club": "Monaco[a]",
+        "club": "Monaco",
         "play_in_rank": 8,
         "country": "Senegal",
         "local": false,
         "age": 22,
-        "league": "non_big_five",
+        "league": "Ligue_1",
         "play_in_region": "UEFA",
         "play_in_entity": "France"
       },
@@ -20298,7 +20298,7 @@
     "country": "England",
     "diversity_index": 0.6924211566971873,
     "proportion_local": 0.8076923076923077,
-    "proportion_big_five": 0.9230769230769231,
+    "proportion_big_five": 0.9615384615384616,
     "mean_age": 26.76923076923077,
     "squad": [
       {
@@ -20615,12 +20615,12 @@
         "caps": "20",
         "goals": "3",
         "play_in": "England",
-        "club": "Newcastle United[a]",
+        "club": "Newcastle United",
         "play_in_rank": 21,
         "country": "England",
         "local": true,
         "age": 25,
-        "league": "non_big_five",
+        "league": "Premier_League",
         "play_in_region": "UEFA",
         "play_in_entity": "England"
       },

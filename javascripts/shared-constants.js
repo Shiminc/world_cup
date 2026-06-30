@@ -26,7 +26,7 @@ const teamChartMargin ={
     'left':1,
     'right':5, //to accomodate the tooltip
     'top':1,
-    'bottom':1
+    'bottom':3
     }
 const width = 4;
 const height = 7;
@@ -54,5 +54,6 @@ const yScale = d3.scaleBand()
         .round(true)
         // .paddingInner(0.1)
 
+        
 let teamSVG
 let playerCircle

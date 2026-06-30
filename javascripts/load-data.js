@@ -10,6 +10,9 @@ d3.json("../data/data.json")
     create_legend_play_in()
     listenForSelection()  
     create_sort()
+    create_age_selection()
+    create_bigFive_selection()
+    create_play_local_selection()
   })
 .catch(error => console.log(error));
 

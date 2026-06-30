@@ -16,8 +16,8 @@
 
 .panel-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
-    grid-gap: 10%;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 1%;
 }
 
 
@@ -47,4 +47,15 @@ li {
   margin: 0.3%;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.age-button{
+  width: fit-content;
+  background-color: pink;
+  padding: 0.3%;
+  margin: 0.3%;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
