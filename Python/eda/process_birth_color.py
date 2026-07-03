@@ -5,7 +5,7 @@ import json,os, re, math
 PATH = os.getcwd() + "/data/birth_place_color.csv"
 
 def structure_json_dict(row):
-    return {'place': row['birth_place'],
+    return {'birth_place': row['birth_place'],
              'count': row['count'],
              'color': row['color']}    
 def main():    

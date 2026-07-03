@@ -38,7 +38,7 @@ const create_legend_play_in = () => {
                 if (d.entity === 'England')
                     return 0.3
                 else
-                    return 0.0
+                    return 0.3
             })
             .attr('stroke','black')
 
@@ -87,17 +87,5 @@ const create_legend_play_in = () => {
             })
         .attr('font-size','12px')
         .style('font-family','sans-serif')
-    // add countries under federation
-    //     federation.forEach((element) => {
-    //                 console.log(element.countries)
-
-    //     d3.select(`.legend-entity-text-${element.entity}`)
-    //         .selectAll('tspan')
-    //         .data(element.countries) 
-    //         .join('tspan')
-    //             .attr('x', 18)
-    //             .attr('dy','1.3em')
-    //             .text(d=>d)
-    // })    
 
     };

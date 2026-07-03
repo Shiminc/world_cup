@@ -2,17 +2,17 @@ let dataset
 d3.json("../data/data.json")
 .then(data => {
     dataset = data
-    console.table(data)
-    console.log(data.length)
+    // console.table(data)
+    // console.log(data.length)
 
     plotMultipleTeam(data)
     handleTooltips()  
-    create_legend_play_in()
-    listenForSelection()  
-    create_sort()
-    create_age_selection()
-    create_bigFive_selection()
-    create_play_local_selection()
+    createLegendAll(varName,varColorData)
+    // listenForSelection()  
+    // create_sort()
+    // create_age_selection()
+    // create_bigFive_selection()
+    // create_play_local_selection()
   })
 .catch(error => console.log(error));
 
