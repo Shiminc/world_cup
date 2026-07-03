@@ -5,6 +5,7 @@ const createLegendAll = (varName,varColorData) => {
 
     const legendList = d3.select('.legend-panel')
         .append('ul')
+        .attr('class','legend-ul')
         .selectAll('li')
         .data(varColorData)
         .join('li')

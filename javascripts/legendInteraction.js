@@ -1,6 +1,6 @@
 function showSelectedForHighlight (e,d){
     const selectedForHighlight = e.target.getAttribute('id')
-
+        console.log(`.player-circle.${selectedForHighlight}`)
         if (e.shiftKey) {
             e.target.setAttribute('fill','black')
             d3.selectAll(`.player-circle.${selectedForHighlight}`)

@@ -2,7 +2,7 @@ const plotMultipleTeam = (data,varName) => {
     // sorted_data = d3.sort(data,(d)=>-d.diversity_index)
     // sorted_data = d3.sort(data,(d)=>-d.proportion_local)
     // sorted_data = d3.sort(data,(d)=>-d.proportion_big_five)
-    console.log(colorScaleBirthPlace('France'))
+
     sorted_data = data
     const teamPlot = d3.select('.plot-grid-container')
     .selectAll('div')
@@ -23,7 +23,6 @@ const plotMultipleTeam = (data,varName) => {
       .data(d=>d.squad)
       .join('circle')
       .attr('class',d=> { 
-                console.log(d)
                 if (varName === 'play_in'){
                     return `player-circle ${d.play_in}`
                 }
