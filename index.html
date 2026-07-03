@@ -8,7 +8,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="./css/visualization.css"> -->
 </head>
 <body>
-	<div id="intro">
+	<div class="normal-container">
 		<h1>Where do World Cup 2026 players play in?</h1>
 
 	</div>
@@ -20,7 +20,11 @@
 			<div class="play-local-container"></div>
 
 		</div>
-		<div class="legend-panel"></div>
+		<div class="legend-panel">
+			<div class="instruction-interaction">Click on the label below to highlight the players with corresponding characteristics. </div>
+			<div class="instruction-interaction"> To multi-select, press Shift while clicking, to de-select, press control while clicking.</div>
+			<div class="instruction-interaction">Click <span id="show-all-button">Show all</span>to reset.</div>
+		</div>
 		<div class="plot-grid-container">
 		</div>
 
@@ -39,7 +43,7 @@
 	<script src="./javascripts/legendAll.js"></script>
 
 	<script src="./javascripts/toolTips.js"></script>
-	<script src="./javascripts/interactions_play_in.js"></script>
+	<script src="./javascripts/legendInteraction.js"></script>
 	<script src="./javascripts/sort_by_heterogenity.js"></script> 
 	<script src="./javascripts/sort_by_age.js"></script> 
 	<script src="./javascripts/showBigFive.js"></script> 

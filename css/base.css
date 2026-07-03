@@ -10,11 +10,40 @@
 .country-name {
     display: flex;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;  
+    font-size: 14px;  
+    font-weight: 600;
     justify-content: left;
     
 }
 
+
+.instruction-interaction {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;  
+    justify-content: left;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+#show-all-button {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;  
+    justify-content: left;
+    width: fit-content;
+    background-color: powderblue;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 2%;
+    margin-right: 2%;
+    /* display: table; */
+
+}
 .panel-container {
     display: grid;
     /* grid-template-columns: 1fr 1fr 3fr; */
@@ -25,15 +54,23 @@
     /* margin-right:auto; */
 }
 
+.normal-container {
+    display: flex;
+    justify-content: center;
 
+}
+ul {
+    margin: 0;
+    margin-top:5%;
+    padding: 0;
+}
 
 li {
     list-style: none;
     margin-inline-start: 0;
-
 }
 
-.legend-entity-text,
+.legend-text,
 .player-circle {
     cursor:pointer;
 }

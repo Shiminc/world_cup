@@ -1,12 +1,8 @@
 const createLegendAll = (varName,varColorData) => {
-    //to add label
-    // d3.select('.legend-panel')
-    // .append('div')
-    // .text('')
-
-    // TODO add SHOW ALL button
+    //todo make 'with corresponding characteristics' dynamics
     console.log(varName)
     console.table(varColorData)
+
     const legendList = d3.select('.legend-panel')
         .append('ul')
         .selectAll('li')

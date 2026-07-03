@@ -1,18 +1,14 @@
 function showHyperlink(e,d){
     // const name= d.player.replace
     window.open(`https://en.wikipedia.org/wiki/${d.player}`,"_blank")
-
 }
 
 function hideTooltips(e,d) {
     //remove the tooltips
-
     d3.select("#toolTip-text")
     .remove();
-
     d3.select("#toolTip-background")
     .remove();
-
 }
 
 function showTooltips(e,d) {
@@ -49,7 +45,7 @@ function showTooltips(e,d) {
       .attr("text-anchor", "start")
 
     textContainer.append('tspan').attr('class','play_in')
-      .text('plays in ' + d.play_in.replaceAll("_"," "))
+      .text('Plays in ' + d.play_in.replaceAll("_"," "))
       .attr('x',cx)
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')
@@ -72,7 +68,6 @@ function showTooltips(e,d) {
     //get the dimension of the rect-background based on the space text takes on
     let text = this.parentNode.querySelector('text');
     let box = text.getBBox();
-    console.log(box)
     rectBackground.attr('id','toolTip-background')
       .attr("x", cx)
       .attr("y", cy)
