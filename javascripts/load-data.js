@@ -5,7 +5,7 @@ d3.json("../data/data.json")
     // console.table(data)
     // console.log(data.length)
 
-    plotMultipleTeam(data)
+    plotMultipleTeam(data, varName)
     handleTooltips()  
     createLegendAll(varName,varColorData)
     // listenForSelection()  

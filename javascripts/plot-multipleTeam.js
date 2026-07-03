@@ -1,4 +1,4 @@
-const plotMultipleTeam = (data) => {
+const plotMultipleTeam = (data,varName) => {
     // sorted_data = d3.sort(data,(d)=>-d.diversity_index)
     // sorted_data = d3.sort(data,(d)=>-d.proportion_local)
     // sorted_data = d3.sort(data,(d)=>-d.proportion_big_five)
@@ -16,12 +16,19 @@ const plotMultipleTeam = (data) => {
       .append('g')
       .attr("transform", `translate(${teamChartMargin.left}, ${teamChartMargin.top})`)
 
+    //TODO d3.rollup/groupsout to sort within squad based on the varName so bubble grouped together
+    
     playerCircle = teamSVG.selectAll('circle')
-      // .data(d=>d3.sort(d.squad,(x)=>x.player))
       .data(d=>d.squad)
       .join('circle')
-      .attr('class',d=>`player-circle ${d.play_in}`)
-      .attr('fill',d => colorScalePlayIn(d.play_in))
+      .attr('class',d=>`player-circle ${d[varName]}`)
+      .attr('fill',d => { 
+                if (varName === 'play_in'){
+                    return colorScalePlayIn(d.play_in)
+                   
+                } // varName === 'play_in'
+            } // fill d
+            ) // fill 
       .attr('cx',(d,i) => xScale(i%teamDimension.width))
       .attr('cy',(d,i) => yScale(Math.floor(i/teamDimension.width)))
       .attr('r',xScale.bandwidth()/3)
