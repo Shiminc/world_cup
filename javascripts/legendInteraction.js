@@ -1,6 +1,11 @@
+const exclusion = ["AFC","CAF","CONCACAF","CONMEBOL","OFC","UEFA",
+    "Asia-Pacific","Africa","Europe","Carribean"]
+
 function showSelectedForHighlight (e,d){
     const selectedForHighlight = e.target.getAttribute('id')
-        console.log(`.player-circle.${selectedForHighlight}`)
+
+    if (exclusion.includes(selectedForHighlight)==false){
+
         if (e.shiftKey) {
             e.target.setAttribute('fill','black')
             d3.selectAll(`.player-circle.${selectedForHighlight}`)
@@ -25,7 +30,7 @@ function showSelectedForHighlight (e,d){
             .style('opacity',1)
 
         }
-    
+    }
 };
 
 function showAll(){

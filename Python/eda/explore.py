@@ -23,7 +23,7 @@ def determine_league(club_name):
     elif club_name in league_data['bundesliga']:
         league = 'Bundesliga'
     else:
-        league = 'non_big_five'
+        league = 'Others'
     return league
 
 def extract_name(name_string):

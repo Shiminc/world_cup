@@ -1,24 +1,9 @@
 variables = [
     {"variable_name":"play_in", "label":"Where players play professionally", "data":play_in_data},
     {"variable_name":"birth_place", "label":"Where players were born","data":birth_place_data},
+    {"variable_name":"league", "label":"Whether players play in Big 5","data":league_data},
+
 ]
-
-function showPlayIn(){
-    varName = "play_in"
-    varColorData = play_in_data
-    d3.selectAll('circle')
-    // .attr('cx', d=>xScaleAge(d.age))
-    .attr('fill',d=>colorScalePlayIn(d.play_in))
-    .attr('class', d=>`player-circle ${d.play_in}` )
-    .style('opacity',1)
-
-    d3.select('.legend-ul')
-    .remove()
-
-    createLegendAll (varName,varColorData)
-    listenForHighLightSelection() 
-    listenForShowAll()
-}
 
 function showSelected(varSelected){
     const varSelectedData = variables.find(variable=>variable.variable_name===varSelected)
@@ -32,6 +17,10 @@ function showSelected(varSelected){
         }
         else if (varSelected === 'birth_place'){
             return colorScaleBirthPlace(d.birth_place)
+        }
+        else if (varSelected === 'league'){
+            return colorScaleBigFive(d.league)
+
         }
     })
     .attr('class', d=>`player-circle ${d[varSelected]}` )
@@ -59,8 +48,6 @@ function createVariableSelection(){
 
 function changeVar(e,d){
     const varSelected = e.target.getAttribute('id')
-    console.log(varSelected)
-    // showPlayIn()
     showSelected(varSelected)
 }
 

@@ -59,5 +59,6 @@ let teamSVG
 let playerCircle
 let varName = 'birth_place'
 let varColorData = birth_place_data
+let variables
 // let varName = 'play_in'
 // let varColorData = play_in_data

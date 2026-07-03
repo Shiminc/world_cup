@@ -37,7 +37,9 @@ const createLegendAll = (varName,varColorData) => {
                     else {
                         return d.color
                     }
-
+                }
+                else if (varName === 'league'){
+                    return d.color
                 }
             } // fill d
             ) // fill 
@@ -75,7 +77,7 @@ const createLegendAll = (varName,varColorData) => {
     
     
     const bar = legendSVG.append('rect')
-            .attr('x',150)
+            .attr('x',155)
             .attr('y',0)
             .attr('width',d=>{
                 if (varName === 'play_in'){
@@ -85,6 +87,11 @@ const createLegendAll = (varName,varColorData) => {
                 else if (varName === 'birth_place'){
                        return barWidthScaleBirthPlace(d.count)
                     } // varName === 'play_in'
+
+                else if (varName === 'league'){
+                       return barWidthScaleBigFive(d.count)
+                    } // varName === 'play_in'
+
                 } 
             ) // fill 
             .attr('height',18)
@@ -105,6 +112,9 @@ const createLegendAll = (varName,varColorData) => {
                     }// varName === 'play_in'
                 else if (varName === 'birth_place'){
                         return barWidthScaleBirthPlace(d.count) + 160
+                } 
+                else if (varName === 'league'){
+                        return barWidthScaleBigFive(d.count) + 160
                 } 
             })
             .attr('y',12)
