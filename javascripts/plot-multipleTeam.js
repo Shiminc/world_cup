@@ -10,12 +10,18 @@ const plotMultipleTeam = (data,varName) => {
     .join('div')
     .attr('class','grid-box-team')
 
-    teamSVG = teamPlot
+    teamPlot
+      .append('div')
+      .attr('class','country-name')
+      .text(d=>d.country.replaceAll("_"," "))
+
+      teamSVG = teamPlot
       .append('svg')
       .attr("viewBox", `0, 0, ${teamChart.width + teamChartMargin.left + teamChartMargin.right}, ${teamChart.height + teamChartMargin.bottom + teamChartMargin.top}`)
       .attr('class',d=>`svg-team ${d.country}`)
       .append('g')
       .attr("transform", `translate(${teamChartMargin.left}, ${teamChartMargin.top})`)
+
 
     //TODO d3.rollup/groupsout to sort within squad based on the varName so bubble grouped together
     
@@ -47,8 +53,8 @@ const plotMultipleTeam = (data,varName) => {
             .attr('stroke-width', 0.05)
       .attr('stroke','black')
 
-    teamPlot
-      .append('div')
-      .attr('class','country-name')
-      .text(d=>d.country.replaceAll("_"," "))
+    // teamPlot
+    //   .append('div')
+    //   .attr('class','country-name')
+    //   .text(d=>d.country.replaceAll("_"," "))
 };

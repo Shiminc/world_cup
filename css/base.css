@@ -1,7 +1,7 @@
 .plot-grid-container{
     display: grid;
     grid-template-columns: repeat(4,250px);
-    row-gap: 1%;
+    row-gap: 0%;
     column-gap:1%;
     /* justify-content: center; */
 
@@ -13,7 +13,11 @@
     font-size: 14px;  
     font-weight: 600;
     justify-content: left;
-    
+    padding-left:7%;
+    padding-bottom:0%;
+    margin-bottom:0%;
+    margin-top:4%;
+
 }
 
 
