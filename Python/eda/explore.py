@@ -5,11 +5,12 @@ import json,os, re, math
 PATH = os.getcwd() + "/data/all_squads.json"
 entity_path = os.getcwd() + "/data/entity.csv"
 league_path = os.getcwd() + "/data/league.json"
+birthplace = pd.read_csv(os.getcwd()+"/data/wc2026_players_updated.csv")
 
 with open(league_path, 'r') as json_file:
         league_data = json.load(json_file)
 
-
+        
 def determine_league(club_name):
     if club_name in league_data['premier_league']:
         league = 'Premier_League'
@@ -25,6 +26,14 @@ def determine_league(club_name):
         league = 'non_big_five'
     return league
 
+def extract_name(name_string):
+    # search captain related string 
+    if re.search(r'\(.*',name_string):
+        captain_string = re.search(r'\(.*',name_string).group(0)
+        name = name_string.replace(captain_string,"")
+    else:
+        name = name_string
+    return name
 def extract_age(birth_age_string):
     if re.search(r'[0-9]{2}\)$',birth_age_string):
         age = re.search(r'([0-9]{2})\)$',birth_age_string).group(1)
@@ -49,6 +58,8 @@ def reorganise_dataframe(data_df):
         data['local'] = data['play_in'] == data['country']
         # "birth_age": "(2000-02-03) 3 February 2000 (age\u00a026)",
         data['age'] = data['birth_age'].apply(extract_age)
+        data['player'] = data['player'].apply(extract_name)
+
         data['club'] = data['club'].apply(lambda x:x.replace('[a]',''))
 
         data['league'] = data['club'].apply(determine_league)
@@ -109,12 +120,15 @@ def read_json_to_df(path):
 
     return data
 
+
 def main():
     data = read_json_to_df(PATH)
     play_in_numbers = pd.DataFrame(data.play_in.value_counts()).reset_index()
-    play_in_numbers.to_json('trial.json',orient='records')
-    # data.to_csv('players.csv')
+    # play_in_numbers.to_json('trial.json',orient='records')
+    # data.to_csv('players.csv', encoding="utf-8-sig")
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
+    data = data.merge(birthplace,on='player')
+
     data_json = reorganise_to_json(data)
     with open(os.getcwd() + "/data/data.json",'w') as file:
         json.dump(data_json,file)

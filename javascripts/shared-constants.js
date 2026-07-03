@@ -26,7 +26,7 @@ const teamChartMargin ={
     'left':1,
     'right':5, //to accomodate the tooltip
     'top':1,
-    'bottom':1.5
+    'bottom':1.8
     }
 const width = 4;
 const height = 7;

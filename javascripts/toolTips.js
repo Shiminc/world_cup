@@ -1,4 +1,5 @@
 function showHyperlink(e,d){
+    // const name= d.player.replace
     window.open(`https://en.wikipedia.org/wiki/${d.player}`,"_blank")
 
 }
@@ -26,7 +27,7 @@ function showTooltips(e,d) {
     // append the text then tspan
     textContainer = d3.select(this.parentNode).append('text')
     .attr('id','toolTip-text')
-    .attr('font-size',0.6)
+    .attr('font-size',0.5)
     .attr('font-family', 'sans-serif')
     .attr('x',cx)
     .attr('y',cy) 
@@ -60,6 +61,14 @@ function showTooltips(e,d) {
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')
       .attr("text-anchor", "start")
+
+    textContainer.append('tspan').attr('class','birth_nation')
+      .text(`Born in ${d.birth_country}`)
+      .attr('x',cx)
+      .attr('transform',`translateX (${r})`)  
+      .attr('dy','1.2em')
+      .attr("text-anchor", "start")
+
     //get the dimension of the rect-background based on the space text takes on
     let text = this.parentNode.querySelector('text');
     let box = text.getBBox();
