@@ -33,6 +33,15 @@ const createLegendAll = (varName,varColorData) => {
                         return d.color
                     }
                 } // varName === 'play_in'
+                else if (varName === 'birth_place'){
+                    if (d.count < 21 & d.count>0){
+                        return 'white'
+                        }
+                    else {
+                        return d.color
+                    }
+
+                }
             } // fill d
             ) // fill 
             .attr('stroke-width', 0.3)
@@ -45,6 +54,15 @@ const createLegendAll = (varName,varColorData) => {
                         return 'black'
                     }
                 } // varName === 'play_in'
+                else if (varName === 'birth_place'){
+                    if (d.count < 21 & d.count>0){
+                        return 'white'
+                        }
+                    else {
+                        return 'black'
+                    }
+
+                }
             } // fill d
             ) // fill 
 
@@ -66,15 +84,20 @@ const createLegendAll = (varName,varColorData) => {
                 if (varName === 'play_in'){
                        return barWidthScalePlayIn(d.count)
                     } // varName === 'play_in'
+                 
+                else if (varName === 'birth_place'){
+                       return barWidthScaleBirthPlace(d.count)
+                    } // varName === 'play_in'
                 } 
             ) // fill 
             .attr('height',18)
-            .attr("fill", d => { 
-                if (varName === 'play_in'){
-                        return d.color
-                    } // varName === 'play_in'
-            } // fill d
-            ) // fill 
+            // .attr("fill", d => { 
+            //     if (varName === 'play_in'){
+            //             return d.color
+            //         } // varName === 'play_in'
+            // } // fill d
+            // ) // fill 
+            .attr('fill',d=>d.color)
             .attr('stroke-width', 0.3)
             .attr('stroke','black')
 
@@ -83,17 +106,24 @@ const createLegendAll = (varName,varColorData) => {
                 if (varName === 'play_in'){
                         return barWidthScalePlayIn(d.count) + 160
                     }// varName === 'play_in'
+                else if (varName === 'birth_place'){
+                        return barWidthScaleBirthPlace(d.count) + 160
                 } 
-            )
+            })
             .attr('y',12)
+            // .text(d=>{
+            //     if (varName === 'play_in'){
+            //             if (d.count!=0){
+            //                 return d.count
+            //             }
+            //         }// varName === 'play_in'
+            //     } 
+            // )
             .text(d=>{
-                if (varName === 'play_in'){
-                        if (d.count!=0){
-                            return d.count
-                        }
-                    }// varName === 'play_in'
-                } 
-            )
+                if (d.count!=0){
+                    return d.count
+                }
+            })
             .attr('font-size','12px')
             .style('font-family','sans-serif')
 

@@ -57,5 +57,7 @@ const yScale = d3.scaleBand()
         
 let teamSVG
 let playerCircle
-let varName = 'play_in'
-let varColorData = play_in_data
+let varName = 'birth_place'
+let varColorData = birth_place_data
+// let varName = 'play_in'
+// let varColorData = play_in_data

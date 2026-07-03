@@ -4,7 +4,7 @@ const birth_place_data = [
   { "birth_place": "Germany", "count": 49, "color": "#FFCE00" },
   { "birth_place": "England", "count": 48, "color": "#FFFFFF" },
   { "birth_place": "Sweden", "count": 36, "color": "#006AA7" },
-  { "birth_place": "Spain", "count": 36, "color": "E60026" },
+  { "birth_place": "Spain", "count": 36, "color": "#E60026" },
   { "birth_place": "Belgium", "count": 36, "color": "#000000" },
   { "birth_place": "Austria", "count": 31, "color": "#EF3340" },
   { "birth_place": "Argentina", "count": 31, "color": "#6CACE4" },
@@ -28,6 +28,7 @@ const birth_place_data = [
   { "birth_place": "Canada", "count": 23, "color": "#D80621" },
   { "birth_place": "Jordan", "count": 23, "color": "#007A3D" },
   { "birth_place": "Mexico", "count": 22, "color": "#006847" },
+  { "birth_place": "Scotland", "count": 22, "color": "#499894" },
   { "birth_place": "Paraguay", "count": 21, "color": "#FEDF00" },
   { "birth_place": "Asia-Pacific", "count": 0, "color": "#FABFD2" },
   { "birth_place": "Australia", "count": 20, "color": "#FABFD2" },
@@ -44,7 +45,7 @@ const birth_place_data = [
   { "birth_place": "Algeria", "count": 11, "color": "#b07AA1" },
   { "birth_place": "Morocco", "count": 7, "color": "#b07AA1" },
   {
-    "birth_place": "Democratic Republic of the Congo",
+    "birth_place": "DR Congo",
     "count": 6,
     "color": "#b07AA1"
   },
@@ -57,7 +58,6 @@ const birth_place_data = [
   { "birth_place": "Zambia", "count": 1, "color": "#b07AA1" },
   { "birth_place": "Republic of the Congo", "count": 1, "color": "#b07AA1" },
   { "birth_place": "Europe", "count": 0, "color": "#9c755f" },
-  { "birth_place": "Scotland", "count": 22, "color": "#9c755f" },
   { "birth_place": "Croatia", "count": 17, "color": "#9c755f" },
   { "birth_place": "Turkey", "count": 16, "color": "#9c755f" },
   { "birth_place": "Bosnia and Herzegovina", "count": 14, "color": "#9c755f" },
@@ -73,3 +73,12 @@ const birth_place_data = [
   { "birth_place": "Cura\u00e7ao", "count": 1, "color": "#86BCB6" },
   { "birth_place": "Guinea", "count": 1, "color": "#86BCB6" }
 ]
+
+
+const barWidthScaleBirthPlace = d3.scaleLinear()
+        .domain([0,100])
+        .range([0,100])
+
+const colorScaleBirthPlace = d3.scaleOrdinal()
+        .domain(birth_place_data.map(d => d.birth_place))
+        .range(birth_place_data.map(d => d.color))

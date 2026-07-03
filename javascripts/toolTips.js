@@ -49,7 +49,7 @@ function showTooltips(e,d) {
       .attr("text-anchor", "start")
 
     textContainer.append('tspan').attr('class','play_in')
-      .text(d.play_in.replaceAll("_"," "))
+      .text('plays in ' + d.play_in.replaceAll("_"," "))
       .attr('x',cx)
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')
@@ -62,8 +62,8 @@ function showTooltips(e,d) {
       .attr('dy','1.2em')
       .attr("text-anchor", "start")
 
-    textContainer.append('tspan').attr('class','birth_nation')
-      .text(`Born in ${d.birth_country}`)
+    textContainer.append('tspan').attr('class','birth_place')
+      .text(`Born in ${d.birth_place}`)
       .attr('x',cx)
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')
