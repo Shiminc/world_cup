@@ -2,11 +2,9 @@ let dataset
 d3.json("../data/data.json")
 .then(data => {
     dataset = data
-    // console.table(data)
-    // console.log(data.length)
-
     plotMultipleTeam(data, varName)
     handleTooltips()  
+    // calculateAge(data)
     createLegendAll(varName,varColorData)
     listenForHighLightSelection() 
     listenForShowAll()

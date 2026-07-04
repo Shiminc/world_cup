@@ -59,7 +59,7 @@ function showTooltips(e,d) {
       .attr("text-anchor", "start")
 
     textContainer.append('tspan').attr('class','birth_place')
-      .text(`Born in ${d.birth_place}`)
+      .text(`Born in ${d.birth_place.replaceAll("_"," ")}`)
       .attr('x',cx)
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')

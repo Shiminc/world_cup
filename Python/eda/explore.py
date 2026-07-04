@@ -78,28 +78,32 @@ def reorganise_dataframe(data_df):
     
     return df_total.fillna("") 
 
-def calculate_shannon_diversity_index(data):
+def calculate_shannon_diversity_index(data, variable):
 #https://www.statology.org/shannon-diversity-index/
 
     total_number_player = data.shape[0]     
-    play_in_df = data['play_in'].value_counts().to_frame()
-    play_in_df.reset_index(inplace=True)
-    play_in_df['proportion']=play_in_df['count']/total_number_player
-    play_in_df['index_part']= play_in_df['proportion']*play_in_df['proportion'].apply(math.log)
-    return -sum(play_in_df['index_part'])
+    count_df = data[variable].value_counts().to_frame()
+    count_df.reset_index(inplace=True)
+    count_df['proportion']=count_df['count']/total_number_player
+    count_df['index_part']= count_df['proportion']*count_df['proportion'].apply(math.log)
+    return -sum(count_df['index_part'])
 
 
 def reorganise_to_json(df):
     json_format = []
     for country in df.country.unique():
         data = df[df['country']==country]
-        index = calculate_shannon_diversity_index(data)
-        proportion_local = (data['local']).mean()
+        play_index = calculate_shannon_diversity_index(data,"play_in")
+        birth_index = calculate_shannon_diversity_index(data,"birth_place")
+        proportion_play_local = (data['local']).mean()
+        proportion_born_local = (data['born_local']).mean()
         proportion_big_five = sum(data['league']!='Others')/data.shape[0]
         country_dic = {
             'country': country,
-            'diversity_index': index,
-            'proportion_local':proportion_local,
+            'play_diversity_index': play_index,
+            'birth_diversity_index': birth_index,
+            'proportion_play_local':proportion_play_local,
+            'proportion_born_local':proportion_born_local,
             'proportion_big_five':proportion_big_five,
             'mean_age': data['age'].mean(),
             'squad': data.to_dict('records')
@@ -133,7 +137,7 @@ def main():
     # data.to_csv('players.csv', encoding="utf-8-sig")
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
     data = data.merge(birthplace,on='player')
-    
+    data['born_local'] = data['birth_place']==data['country']
     data_json = reorganise_to_json(data)
     with open(os.getcwd() + "/data/data.json",'w') as file:
         json.dump(data_json,file)
