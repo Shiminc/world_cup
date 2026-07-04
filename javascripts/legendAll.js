@@ -40,7 +40,7 @@ const createLegendAll = (varName,varColorData) => {
                         return d.color
                     }
                 }
-                else if (varName === 'league'){
+                else if (varName === 'league' || varName === 'play_local'){
                     return d.color
                 }
             } // fill d
@@ -93,7 +93,9 @@ const createLegendAll = (varName,varColorData) => {
                 else if (varName === 'league'){
                        return barWidthScaleBigFive(d.count)
                     } // varName === 'play_in'
-
+                else if (varName === 'play_local'){
+                       return barWidthScalePlayLocal(d.count)
+                    } // varName === 'play_in'
                 } 
             ) // fill 
             .attr('height',18)
@@ -117,6 +119,9 @@ const createLegendAll = (varName,varColorData) => {
                 } 
                 else if (varName === 'league'){
                         return barWidthScaleBigFive(d.count) + 160
+                } 
+                else if (varName === 'play_local'){
+                        return barWidthScalePlayLocal(d.count) + 160
                 } 
             })
             .attr('y',12)

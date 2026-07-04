@@ -2,6 +2,7 @@ variables = [
     {"variable_name":"play_in", "label":"Where players play professionally", "data":play_in_data},
     {"variable_name":"birth_place", "label":"Where players were born","data":birth_place_data},
     {"variable_name":"league", "label":"Whether players play in Big 5","data":league_data},
+    {"variable_name":"play_local", "label":"Whether players play in local leagues","data":play_local_data},
 
 ]
 
@@ -20,7 +21,9 @@ function showSelected(varSelected){
         }
         else if (varSelected === 'league'){
             return colorScaleBigFive(d.league)
-
+        }
+        else if (varSelected === 'play_local'){
+            return colorScalePlayLocal(d.play_local)
         }
     })
     .attr('class', d=>`player-circle ${d[varSelected]}` )

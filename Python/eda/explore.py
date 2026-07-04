@@ -55,7 +55,12 @@ def reorganise_dataframe(data_df):
         data['play_in'] = data['play_in'].apply(lambda x:x.lstrip('the_'))
         data['play_in_rank'] = data['play_in'].apply(rank_play_in, country_df=data)
         data['country'] = data_df.iloc[i]['country']
+        
         data['local'] = data['play_in'] == data['country']
+        data['play_local'] = ""
+        data.loc[data['local']==True,'play_local']="Play_Local"
+        data.loc[data['local']==False,'play_local']="Do_Not_Play_Local"
+
         # "birth_age": "(2000-02-03) 3 February 2000 (age\u00a026)",
         data['age'] = data['birth_age'].apply(extract_age)
         data['player'] = data['player'].apply(extract_name)
@@ -90,7 +95,7 @@ def reorganise_to_json(df):
         data = df[df['country']==country]
         index = calculate_shannon_diversity_index(data)
         proportion_local = (data['local']).mean()
-        proportion_big_five = sum(data['league']!='non_big_five')/data.shape[0]
+        proportion_big_five = sum(data['league']!='Others')/data.shape[0]
         country_dic = {
             'country': country,
             'diversity_index': index,
