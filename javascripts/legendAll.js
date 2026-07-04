@@ -15,8 +15,10 @@ const createLegendAll = (varName,varColorData) => {
         .append('svg')
             .attr("width", 350)
             .attr("height", 20)
-            .attr('class',d=>`legend-svg-${varName}`)
-    
+            // .attr('class',d=>`legend-svg-${varName}`)
+            .attr('class','legend-svg')
+            .attr('id',d=>d[varName])
+
     legendSVG.append('circle')
             .attr("cx", 10)
             .attr("cy", 8)

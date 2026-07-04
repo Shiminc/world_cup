@@ -79,7 +79,6 @@ const play_in_data = [
   { "play_in": "Unattached", "color": "#C8D0D9", "count": 2.0 }
 ]
 
-
 const barWidthScalePlayIn = d3.scaleLinear()
         .domain([0,200])
         .range([0,100])
