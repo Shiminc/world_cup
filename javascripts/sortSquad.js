@@ -1,29 +1,46 @@
-const squad = 
-[        'Czech_Republic',                 'Mexico',           'South_Africa',
-            'South_Korea', 'Bosnia_and_Herzegovina',                 'Canada',
-                  'Qatar',            'Switzerland',                 'Brazil',
-                  'Haiti',                'Morocco',               'Scotland',
-              'Australia',               'Paraguay',                 'Turkey',
-          'United_States',                'Curacao',                'Ecuador',
-                'Germany',            'Ivory_Coast',                  'Japan',
-            'Netherlands',                 'Sweden',                'Tunisia',
-                'Belgium',                  'Egypt',                   'Iran',
-            'New_Zealand',             'Cape_Verde',           'Saudi_Arabia',
-                  'Spain',                'Uruguay',                 'France',
-                   'Iraq',                 'Norway',                'Senegal',
-                'Algeria',              'Argentina',                'Austria',
-                 'Jordan',               'Colombia',               'DR_Congo',
-               'Portugal',             'Uzbekistan',                'Croatia',
-                'England',                  'Ghana',                 'Panama']
 
-// const createSort(){
+function sortTeam (e,d){
+    const selectedForSort= e.target.getAttribute('id')
+    console.log(selectedForSort)
+    if (selectedForSort=='group'){
+        sorted_data = d3.sort(dataset,(d)=>d.country_index)
+        d3.select('#group.sort-team ')
+        .style('background-color',' #3377ff')
+        .style('color','white')
+        d3.select('#variable.sort-team ')
+        .style('background-color', 'powderblue')
+        .style('color','black')
+
+    }
+    else if (selectedForSort=='variable'){
+    const varSort = variables.find(variable=>variable.variable_name===varName)
+        sortIndex = varSort.sort_index
+        sorted_data = d3.sort(dataset,(d)=>-d[sortIndex])
+        d3.select('#group.sort-team ')
+        .style('background-color', 'powderblue')
+        .style('color','black')
+        d3.select('#variable.sort-team ')
+        .style('background-color',' #3377ff')
+        .style('color','white')
+
+    }
     
-// }
+    d3.select('.plot-grid-container').selectAll('div').remove()
+    plotMultipleTeam(sorted_data,varName)
+    handleTooltips()  
 
-const createSort = (varName) => {
-    d3.select('.sort-team')
-        .text('Show age composition')
+}
+function createSort (varName) {
+    const varSelectedData = variables.find(variable=>variable.variable_name===varName)
+    const sortLabel = varSelectedData.sort
+    console.log(sortLabel)
+    d3.select('#variable.sort-team ')
+    .text(sortLabel)
+    .style('background-color', 'powderblue')
+    .style('color','black')
+}
 
-    listenSelection () 
-    
+function listenSort() {
+    d3.selectAll('.sort-team')
+    .on('click', sortTeam)
 }

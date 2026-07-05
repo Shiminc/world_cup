@@ -64,6 +64,13 @@ function showTooltips(e,d) {
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')
       .attr("text-anchor", "start")
+    
+    textContainer.append('tspan').attr('class','number')
+      .text(d.number)
+      .attr('x',cx)
+      .attr('transform',`translateX (${r})`)  
+      .attr('dy','1.2em')
+      .attr("text-anchor", "start")
 
     //get the dimension of the rect-background based on the space text takes on
     let text = this.parentNode.querySelector('text');

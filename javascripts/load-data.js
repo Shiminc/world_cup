@@ -1,4 +1,3 @@
-let dataset
 d3.json("../data/data.json")
 .then(data => {
     dataset = data
@@ -8,8 +7,11 @@ d3.json("../data/data.json")
     createLegendAll(varName,varColorData)
     listenForHighLightSelection() 
     listenForShowAll()
-    createVariableSelection() 
+    createVariableSelection(varName)
+    createSort(varName)
+
     listenVarSelection()
+    listenSort()
     // create_sort()
     // create_age_selection()
     // create_bigFive_selection()

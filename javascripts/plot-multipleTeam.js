@@ -1,12 +1,8 @@
 const plotMultipleTeam = (data,varName) => {
-    // sorted_data = d3.sort(data,(d)=>-d.diversity_index)
-    // sorted_data = d3.sort(data,(d)=>-d.proportion_local)
-    // sorted_data = d3.sort(data,(d)=>-d.proportion_big_five)
 
-    sorted_data = data
     const teamPlot = d3.select('.plot-grid-container')
     .selectAll('div')
-    .data(sorted_data)
+    .data(data)
     .join('div')
     .attr('class','grid-box-team')
 
@@ -28,24 +24,8 @@ const plotMultipleTeam = (data,varName) => {
     playerCircle = teamSVG.selectAll('circle')
       .data(d=>d.squad)
       .join('circle')
-      .attr('class',d=> { 
-                if (varName === 'play_in'){
-                    return `player-circle ${d.play_in}`
-                }
-                else if (varName === 'birth_place'){
-                    return `player-circle ${d.birth_place}`  
-                } // varName === 'play_in'
-            } // fill d
-          )
-      .attr('fill',d => { 
-                if (varName === 'play_in'){
-                    return colorScalePlayIn(d.play_in)
-                }
-                else if (varName === 'birth_place'){
-                    return colorScaleBirthPlace(d.birth_place)   
-                } // varName === 'play_in'
-            } // fill d
-            ) // fill 
+        .attr('class', d=>`player-circle ${d[varName]}` )
+        .attr('fill', d => circleFill(d))
       .attr('cx',(d,i) => xScale(i%teamDimension.width))
       .attr('cy',(d,i) => yScale(Math.floor(i/teamDimension.width)))
       .attr('r',xScale.bandwidth()/3)

@@ -1,22 +1,3 @@
-country = 
-[        'Czech_Republic',                 'Mexico',           'South_Africa',
-            'South_Korea', 'Bosnia_and_Herzegovina',                 'Canada',
-                  'Qatar',            'Switzerland',                 'Brazil',
-                  'Haiti',                'Morocco',               'Scotland',
-              'Australia',               'Paraguay',                 'Turkey',
-          'United_States',                'Curacao',                'Ecuador',
-                'Germany',            'Ivory_Coast',                  'Japan',
-            'Netherlands',                 'Sweden',                'Tunisia',
-                'Belgium',                  'Egypt',                   'Iran',
-            'New_Zealand',             'Cape_Verde',           'Saudi_Arabia',
-                  'Spain',                'Uruguay',                 'France',
-                   'Iraq',                 'Norway',                'Senegal',
-                'Algeria',              'Argentina',                'Austria',
-                 'Jordan',               'Colombia',               'DR_Congo',
-               'Portugal',             'Uzbekistan',                'Croatia',
-                'England',                  'Ghana',                 'Panama']
-
-
 const teamChart = {
     'width' : 4,
     'height' : 7
@@ -62,3 +43,26 @@ let playerCircle
 let variables
 let varName = 'play_in'
 let varColorData = play_in_data
+let dataset
+
+function circleFill(d)
+    {
+        if (varName === 'play_in'){
+            return colorScalePlayIn(d.play_in)
+        }
+        else if (varName === 'birth_place'){
+            return colorScaleBirthPlace(d.birth_place)
+        }
+        else if (varName === 'league'){
+            return colorScaleBigFive(d.league)
+        }
+        else if (varName === 'play_local'){
+            return colorScalePlayLocal(d.play_local)
+        }
+        else if (varName === 'born_local'){
+            return colorScaleBornLocal(d.born_local)
+        }
+        else if (varName === 'age'){
+            return xScaleAgeColor(d.age)
+        }
+    }

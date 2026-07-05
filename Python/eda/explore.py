@@ -91,15 +91,16 @@ def calculate_shannon_diversity_index(data, variable):
 
 def reorganise_to_json(df):
     json_format = []
-    for country in df.country.unique():
+    for i, country in enumerate(df.country.unique()):
         data = df[df['country']==country]
         play_index = calculate_shannon_diversity_index(data,"play_in")
         birth_index = calculate_shannon_diversity_index(data,"birth_place")
         proportion_play_local = (data['local']).mean()
-        proportion_born_local = (data['born_local']).mean()
+        proportion_born_local = (data['born_local_boolean']).mean()
         proportion_big_five = sum(data['league']!='Others')/data.shape[0]
         country_dic = {
             'country': country,
+            'country_index': i,
             'play_diversity_index': play_index,
             'birth_diversity_index': birth_index,
             'proportion_play_local':proportion_play_local,
@@ -137,7 +138,10 @@ def main():
     # data.to_csv('players.csv', encoding="utf-8-sig")
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
     data = data.merge(birthplace,on='player')
-    data['born_local'] = data['birth_place']==data['country']
+    data['born_local_boolean']=data['birth_place']==data['country']
+    data['born_local'] = ""
+    data.loc[data['birth_place']==data['country'],'born_local']="Born_Local"
+    data.loc[data['birth_place']!=data['country'],'born_local']="Not_Born_Local"
     data_json = reorganise_to_json(data)
     with open(os.getcwd() + "/data/data.json",'w') as file:
         json.dump(data_json,file)

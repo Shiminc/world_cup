@@ -15,7 +15,6 @@ const createLegendAll = (varName,varColorData) => {
         .append('svg')
             .attr("width", 350)
             .attr("height", 20)
-            // .attr('class',d=>`legend-svg-${varName}`)
             .attr('class','legend-svg')
             .attr('id',d=>d[varName])
 
@@ -40,7 +39,7 @@ const createLegendAll = (varName,varColorData) => {
                         return d.color
                     }
                 }
-                else if (varName === 'league' || varName === 'play_local' || varName === "age"){
+                else if (varName === 'league' || varName === 'play_local' || varName === "age" || varName === 'born_local'){
                     return d.color
                 }
             } // fill d
@@ -94,7 +93,10 @@ const createLegendAll = (varName,varColorData) => {
                        return barWidthScaleBigFive(d.count)
                     } // varName === 'play_in'
                 else if (varName === 'play_local'){
-                       return barWidthScaleAge(d.count)
+                       return barWidthScalePlayLocal(d.count)
+                    } // varName === 'play_in'
+                else if (varName === 'born_local'){
+                       return barWidthScaleBornLocal(d.count)
                     } // varName === 'play_in'
                 else if (varName === 'age'){
                        return barWidthScaleAge(d.count)
@@ -102,12 +104,6 @@ const createLegendAll = (varName,varColorData) => {
                 } 
             ) // fill 
             .attr('height',18)
-            // .attr("fill", d => { 
-            //     if (varName === 'play_in'){
-            //             return d.color
-            //         } // varName === 'play_in'
-            // } // fill d
-            // ) // fill 
             .attr('fill',d=>d.color)
             .attr('stroke-width', 0.3)
             .attr('stroke','black')
@@ -125,20 +121,15 @@ const createLegendAll = (varName,varColorData) => {
                 } 
                 else if (varName === 'play_local'){
                         return barWidthScalePlayLocal(d.count) + 160
-                } 
+                }
+                else if (varName === 'born_local'){
+                        return barWidthScaleBornLocal(d.count) + 160
+                }  
                 else if (varName === 'age'){
                         return barWidthScaleAge(d.count) + 160
                 } 
             })
             .attr('y',12)
-            // .text(d=>{
-            //     if (varName === 'play_in'){
-            //             if (d.count!=0){
-            //                 return d.count
-            //             }
-            //         }// varName === 'play_in'
-            //     } 
-            // )
             .text(d=>{
                 if (d.count!=0){
                     return d.count

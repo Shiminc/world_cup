@@ -51,10 +51,10 @@
 
 .selection-grid-container{
     display: grid;
-    grid-template-columns: 280px 280px 280px 280px 280px;
-    grid-gap: 0.2%;
+    grid-template-columns: 250px 240px 240px 240px 240px 240px;
+    /* grid-gap: 0.2%; */
     justify-content: center;
-    margin-left:10px;
+    margin-left:40px;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -69,29 +69,33 @@
     width: 50%;
     background-color: powderblue;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 2%;
     margin-right: 2%;
-    padding:2%;
+    padding:3%;
     cursor:pointer;
 
 }
 
-.sort-team-group,
 .sort-team {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;  
     justify-content: left;
     width: fit-content;
-    background-color: powderblue;
+    background-color: lightblue;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 2%;
     margin-right: 2%;
     padding:2%;
     cursor:pointer;
     margin-bottom:2%;
+}
+
+#group.sort-team {
+    background-color: #3377ff;
+    color:white;
 }
 
 .panel-container {
@@ -133,23 +137,4 @@ li {
     cursor:pointer;
 }
 
-
-/* #CAF,#AFC,#CONCACAF,#CONMEBOL,#OFC,#UEFA{
-    cursor:auto;
-} */
-
-
-.sort-container{
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-}
-
-.sort-button{
-  width: fit-content;
-  background-color: powderblue;
-  padding: 0.3%;
-  margin: 0.3%;
-  cursor: pointer;
-  border-radius: 4px;
-}
 
