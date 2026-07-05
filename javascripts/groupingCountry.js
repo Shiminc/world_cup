@@ -27,5 +27,4 @@ const grouping = [
 ]},
  {'entity':'Carribean',
     'countries':["Cura\u00e7ao","Guinea","Haiti"]}
-   
 ]

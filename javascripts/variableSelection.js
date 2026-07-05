@@ -1,9 +1,14 @@
 variables = [
-    {"variable_name":"play_in", "label":"Where players play professionally", "data":play_in_data},
-    {"variable_name":"birth_place", "label":"Where players were born","data":birth_place_data},
-    {"variable_name":"league", "label":"Whether players play in Big 5","data":league_data},
-    {"variable_name":"play_local", "label":"Whether players play in local leagues","data":play_local_data},
-    {"variable_name":"age", "label":"Bonus: Players' age","data":age_data},
+    {"variable_name":"play_in", "label":"Where players play professionally",
+        "sort":"Sort with most mixed teams on top", "data":play_in_data},
+    {"variable_name":"birth_place", "label":"Where players were born",
+        "sort":"Sort with most mixed teams on top","data":birth_place_data},
+    {"variable_name":"league", "label":"Whether players play in Big 5",
+        "sort":"Sort with teams with most players in Big 5 on top","data":league_data},
+    {"variable_name":"play_local", "label":"Whether players play in local leagues",
+        "sort":"Sort with teams with most players play locally on top","data":play_local_data},
+    {"variable_name":"age", "label":"Bonus: Players' age",
+        "sort":"Sort with teams with highest mean age on top","data":age_data},
 
 ]
 
