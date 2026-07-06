@@ -66,7 +66,7 @@ function showTooltips(e,d) {
       .attr("text-anchor", "start")
     
     textContainer.append('tspan').attr('class','number')
-      .text(d.number)
+      .text(`Number ${d.number}`)
       .attr('x',cx)
       .attr('transform',`translateX (${r})`)  
       .attr('dy','1.2em')

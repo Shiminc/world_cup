@@ -45,7 +45,6 @@
     border-radius: 4px;
     margin-left: 2%;
     margin-right: 2%;
-    /* display: table; */
 
 }
 
@@ -121,6 +120,28 @@
     display: relative;
     width: fit-content;
 }
+
+.subtitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px; 
+    margin: 0 auto;
+    display: relative;
+    width: fit-content;
+}
+
+.intro{
+    font-family: 'Roboto', sans-serif;
+    /* margin-left:40px; */
+    /* display: flex; */
+    justify-content: center;
+    width: 60%;
+    /* position: relative; */
+    margin: 0 auto;
+    font-size: 18px; 
+    line-height: 1.5;
+}
+
+
 ul {
     margin: 0;
     margin-top:5%;
@@ -136,5 +157,8 @@ li {
 .player-circle {
     cursor:pointer;
 }
-
+/* 
+.changing-variable {
+    background-color:yellow;
+} */
 

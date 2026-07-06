@@ -33,8 +33,11 @@ const plotMultipleTeam = (data,varName) => {
             .attr('stroke-width', 0.05)
       .attr('stroke','black')
 
-    // teamPlot
-    //   .append('div')
-    //   .attr('class','country-name')
-    //   .text(d=>d.country.replaceAll("_"," "))
+//to show index NOT priority
+// const varSort = variables.find(variable=>variable.variable_name===varName)
+//       sortIndex = varSort.sort_index
+//     teamPlot
+//       .append('div')
+//       .attr('class','country-sort-index')
+//       .text(d=>d[sortIndex])
 };

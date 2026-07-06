@@ -81,9 +81,10 @@ def reorganise_dataframe(data_df):
 def calculate_shannon_diversity_index(data, variable):
 #https://www.statology.org/shannon-diversity-index/
 
-    total_number_player = data.shape[0]     
+    total_number_player = data.shape[0]
     count_df = data[variable].value_counts().to_frame()
     count_df.reset_index(inplace=True)
+
     count_df['proportion']=count_df['count']/total_number_player
     count_df['index_part']= count_df['proportion']*count_df['proportion'].apply(math.log)
     return -sum(count_df['index_part'])

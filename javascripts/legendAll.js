@@ -1,7 +1,7 @@
 const createLegendAll = (varName,varColorData) => {
     //todo make 'with corresponding characteristics' dynamics
-    console.log(varName)
-    console.table(varColorData)
+    // console.log(varName)
+    // console.table(varColorData)
 
     const legendList = d3.select('.legend-panel')
         .append('ul')
