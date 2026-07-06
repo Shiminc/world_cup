@@ -1,4 +1,4 @@
-d3.json("../data/data.json")
+d3.json("./data/data.json")
 .then(data => {
     dataset = data
     plotMultipleTeam(data, varName)
