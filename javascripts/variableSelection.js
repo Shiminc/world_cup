@@ -7,7 +7,7 @@ variables = [
         "sort":"Sort with most mixed teams on top",
         "sort_index":"birth_diversity_index",   
         "data":birth_place_data},
-    {"variable_name":"league", "label":"Whether players play in Big 5",
+    {"variable_name":"league", "label":"Whether players play in Big 5 leagues",
         "sort":"Sort with teams with most players in Big 5 on top",
         "sort_index":"proportion_big_five",   
         "data":league_data},
@@ -58,7 +58,7 @@ function createVariableSelection(varName){
                 .text(d=>d.label)
             
     d3.select(`#${varName}.selection-button`)
-    .style('background-color',' #3377ff')
+    .style('background-color','#3377ff')
     .style('color','white')
 }
 

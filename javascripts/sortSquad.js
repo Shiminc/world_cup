@@ -28,6 +28,10 @@ function sortTeam (e,d){
     d3.select('.plot-grid-container').selectAll('div').remove()
     plotMultipleTeam(sorted_data,varName)
     handleTooltips()  
+    d3.selectAll('.legend-svg')
+        .style('opacity',1)
+    d3.selectAll('#dynamic-numbers')
+        .text("1248")
 
 }
 function createSort (varName) {

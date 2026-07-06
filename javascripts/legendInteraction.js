@@ -58,6 +58,14 @@ function showSelectedForHighlight (e,d){
     else if (country_group.includes(selectedForHighlight)==true){
         highlightCountry(selectedForHighlight, opacity_circle,opacity_legend)
     }
+
+    let selectedCircle = d3.selectAll('.player-circle')
+            .filter(function(){
+                return (getComputedStyle(this).opacity==1)
+            })
+    console.log(selectedCircle.size())
+    d3.selectAll('#dynamic-numbers')
+        .text(selectedCircle.size())
 };
 
 function showAll(){
@@ -65,6 +73,8 @@ function showAll(){
         .style('opacity',1)
         d3.selectAll('.player-circle')
         .style('opacity',1)
+        d3.selectAll('#dynamic-numbers')
+        .text("1248")
 }
 
 function listenForHighLightSelection () {

@@ -28,25 +28,34 @@
 				 birth. Therefore, I see World Cup players as a mirror to general migration.  
 			</p>
 			<p>
-				<b></b>
+				<b>To illustrate migration patterns as reflected by world cup players</b>, I put together all 48 World Cup teams in the dashboard below, with each circle corresponding to one player, 
+				and colour indicating the <span style = "background-color: #3377ff; color: white;">selected variable</span>, and you could toggle between <span style = "background-color: lightblue">variables</span>. The default is where they play professionally. You could also hover over each circle to get a pop up 
+				with more details about the player and click on the circle to be shown the wikipedia page of the player. The legend panel on the left shows the total number of players
+				with the characteristics corresponding to the variable. The panel on the right is my observation.  
 			</p>	
 			</div>
 		<div class="selection-grid-container"></div>
 	</div>
 	<div class="panel-container">
-		<!-- <div class="explanation-panel">
-		</div> -->
+
 		<div class="legend-panel">
+			<div class="analysis" id="title">Legend</div>
+
 			<div class="sort-team" id="group">Sort teams by Groups in the tournament</div>
 			<div class="sort-team" id="variable">Sort Holder</div>
 			<div class="instruction-interaction">Click on the label below to highlight the players with corresponding characteristics. </div>
 			<div class="instruction-interaction"> To multi-select, press Shift while clicking, to de-select, press control while clicking.</div>
 			<div class="instruction-interaction">Click <span id="show-all-button">Show all</span>to reset.</div>
+			<div class="instruction-interaction">Numbers of players selected: <span id="dynamic-numbers">1248</span></div>
 
 		</div>
 		<div class="plot-grid-container">
-		</div>
+			</div>
+		<div class="explanation-panel">
+			<div class="analysis" id="title">Analysis</div>
+			<div class="analysis">Click on the label below to highlight the players with corresponding characteristics. </div>
 
+		</div>
 	</div>
 	<!-- Load javascripts -->
 	<script src="./javascripts/d3.v7.js"></script>
