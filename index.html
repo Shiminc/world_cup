@@ -25,13 +25,17 @@
 				across the world in general. In the same vein, they do not necessarily represent the countries where they were born. They could be choosing to represent countries
 				through ancestry, which is also the legacy of migration. All these choices -- where to pursue professional careers, build family
 				 and express identity at a world stage, are down to personal as well as circumstances. These are also choices facing us, whether you move out or stay in your country of 
-				 birth. Therefore, I see World Cup players as a mirror to general migration.  
+				 birth. Therefore, I see World Cup players as a mirror to general migration. With this in mind while looking at the World Cup, 
+				 it is undeniably that each player may have brought with them to the national team different experiences given all these movements and choices.   
 			</p>
 			<p>
-				<b>To illustrate migration patterns as reflected by world cup players</b>, I put together all 48 World Cup teams in the dashboard below, with each circle corresponding to one player, 
-				and colour indicating the <span style = "background-color: #3377ff; color: white;">selected variable</span>, and you could toggle between <span style = "background-color: lightblue">variables</span>. The default is where they play professionally. You could also hover over each circle to get a pop up 
-				with more details about the player and click on the circle to be shown the wikipedia page of the player. The legend panel on the left shows the total number of players
+				<b>To illustrate the migration patterns as reflected by world cup players and the mix of experiences in each team</b>, I put together all 48 World Cup teams in the dashboard below, with each circle corresponding to one player, 
+				and colour of the circles indicating the <span style = "background-color: #3377ff; color: white;">selected variable</span>, and you could toggle between <span style = "background-color: lightblue">variables</span>. The default is where they play professionally. You could also hover over each circle to get a pop up 
+				with more details about the player and double click on the circle to be shown the wikipedia page of the player. The legend panel on the left shows the total number of players
 				with the characteristics corresponding to the variable. The panel on the right is my observation.  
+			</p>
+			<p>
+				<i>Given the constraint of my technical skills, this dashboard is best viewed with on laptops or desktops with screen resolution at least 1400 px in width rather than small screen devices. </i> 
 			</p>	
 			</div>
 		<div class="selection-grid-container"></div>
@@ -39,7 +43,7 @@
 	<div class="panel-container">
 
 		<div class="legend-panel">
-			<div class="analysis" id="title">Legend</div>
+			<div class="panel-title">Legend</div>
 
 			<div class="sort-team" id="group">Sort teams by Groups in the tournament</div>
 			<div class="sort-team" id="variable">Sort Holder</div>
@@ -52,8 +56,8 @@
 		<div class="plot-grid-container">
 			</div>
 		<div class="explanation-panel">
-			<div class="analysis" id="title">Analysis</div>
-			<div class="analysis">Click on the label below to highlight the players with corresponding characteristics. </div>
+			<div class="panel-title">Analysis</div>
+			<div class="analysis"></div>
 
 		</div>
 	</div>
@@ -65,6 +69,8 @@
 	<script src="./javascripts/colorLocal.js"></script>
 	<script src="./javascripts/colorAge.js"></script>
     <script src="./javascripts/shared-constants.js"></script>
+	<script src="./javascripts/analysisData.js"></script>
+
     <script src="./javascripts/groupingCountry.js"></script>
 
 

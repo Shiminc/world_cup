@@ -3,7 +3,7 @@ d3.json("./data/data.json")
     dataset = data
     plotMultipleTeam(data, varName)
     handleTooltips()  
-    // calculateAge(data)
+    showAnalysis(varName)
     createLegendAll(varName,varColorData)
     listenForHighLightSelection() 
     listenForShowAll()
@@ -12,10 +12,7 @@ d3.json("./data/data.json")
 
     listenVarSelection()
     listenSort()
-    // create_sort()
-    // create_age_selection()
-    // create_bigFive_selection()
-    // create_play_local_selection()
+
   })
 .catch(error => console.log(error));
 

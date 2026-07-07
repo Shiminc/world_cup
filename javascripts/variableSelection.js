@@ -25,6 +25,18 @@ variables = [
         "data":age_data},
 
 ]
+function showAnalysis(varSelected){
+    console.log('showAnalysis')
+    const varSelectedData = analysis_data.find(variable=>variable.variable_name===varSelected)
+    console.log(varSelectedData.analysis)
+
+    d3.select('.analysis')
+    .selectAll('p')
+    .data(varSelectedData.analysis)
+    .join('p')
+        .text(d=>d)
+
+}
 
 function showSelected(varSelected){
     const varSelectedData = variables.find(variable=>variable.variable_name===varSelected)
@@ -44,7 +56,7 @@ function showSelected(varSelected){
     listenForHighLightSelection() 
     listenForShowAll()
     createSort(varSelected)
-
+    showAnalysis(varSelected)
 }
 
 

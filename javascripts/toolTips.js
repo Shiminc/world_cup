@@ -90,6 +90,6 @@ function handleTooltips () {
     const playerToolTips = d3.selectAll('.player-circle')
     .on('mouseenter',showTooltips)
     .on('mouseleave',hideTooltips)
-    .on('click',showHyperlink)
+    .on('dblclick',showHyperlink)
 
 }

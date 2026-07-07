@@ -1,6 +1,6 @@
 .plot-grid-container{
     display: grid;
-    grid-template-columns: repeat(4,250px);
+    grid-template-columns: repeat(4,200px);
     row-gap: 0%;
     column-gap:1%;
     /* justify-content: center; */
@@ -48,6 +48,12 @@
     margin-right: 2%;
 
 }
+body{
+    margin:0;
+     
+
+
+}
 
 .selection-grid-container{
     display: grid;
@@ -57,8 +63,8 @@
     margin-left:40px;
     margin-bottom: 40px;
     margin-top: 20px;
-
-}
+    position: sticky;
+}  
 
 .selection-button {
     display: flex;
@@ -102,13 +108,18 @@
     display: grid;
     /* grid-template-columns: 1fr 1fr 3fr; */
     /* grid-template-columns: 200px 300px 900px; */
-    grid-template-columns: 300px 900px 200px;
-
+    /* grid-template-columns: 300px 900px 200px; */
+    grid-template-columns: 350px 800px 250px;
+    width:100%;
     grid-gap: 1%;
     justify-content: center;
+    /* max-width: 100%; */
     /* margin-left:auto; */
     /* margin-right:auto; */
+    margin: auto;
+
 }
+
 
 .normal-container {
     /* display: flex; */
@@ -170,7 +181,8 @@ li {
     font-size: 14px; 
 }
 
-#title.analysis {
+.panel-title {
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 16px;
     justify-content: left;
