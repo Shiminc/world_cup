@@ -20,7 +20,7 @@ const analysis_data = [
         {"variable_name":"birth_place", 
             "analysis":[
                 "Top Birth Place",
-                "So much media has been focused on the fact that France 'produced' (pun intended) the most number of players in the World Cup. A closer look at those players also revealed some human migration trend in relataion to colonial past. Beside France national team itself, Algeria, Haiti, DR Congo, Senegal all have at least 10 players born in France, followed by Ivory Coast and Tunisia with 8 and 7 players respectively. All these countries used to be the colonised by France, it is likely that players' ancestors might have migrated to France either voluntary or forced slavery. Nonetheless, all these countries except DR Congo also at least nine players born locally",
+                "So much media has been focused on the fact that France 'produced' (pun intended) the most number of players in the World Cup. A closer look at those players also revealed some human migration trend in relataion to colonial past. Beside France national team itself, Algeria, Haiti, DR Congo, Senegal all have at least 10 players born in France, followed by Ivory Coast and Tunisia with 8 and 7 players respectively. All these countries used to be the colonised by France, it is likely that players' ancestors might have migrated to France either voluntary or forced slavery. Nonetheless, all these countries except DR Congo also have at least nine players born locally",
                 "Similarly, another top 'producer' is Netherlands, which to some extent produced two teams in the world cup, Netherlands national team itself and Curacao, which used to be colonised by the Dutch. Nonetheless, Curacao does have a player born there, Chong and with the surname, you know, he is of Chinese descent. What a wonderful mix of culture!",
                 "You could explore the above observations by selecting France and Netherlands on the legend.",
                 "Most Mixed team",
@@ -34,9 +34,27 @@ const analysis_data = [
         },
         {"variable_name":"play_local",    
         "analysis":[
-            "This visualisation gives a more general view of where players play professionally by simply looking at whether they play locally. "
-
-        ]},  
+            "This visualisation gives a more general view of where players play professionally by simply looking at whether they play locally. ",
+            "All countries participating in the World Cup have their own football leagues, although six national teams are without any players playing in local leagues, 15 teams with one to five players playing locally, 10 teams have five to 12 players playing locally, while 13 teams have more than half of their players play locally.",
+            "This distribution raises the questions of whether home-grown talents are selected to represent the nation or if the nation own league could produce talent to represent their countries.",
+            "For example, it has been speculated that the success of the two deputants - Cape Verde and Curaçao depends on recruiting those playing in foreign leagues to represent the country. However, it is worth noticing that the other two debutants - Uzbekistan and Jordan have relatively more players playing in local leagues.",
+            "Furthermore, although France has one of the strong football leagues and is where 99 players were born, only eight players from its national team play in local leagues, in contrast to England, Germany and Spain which have their representative players playing in their local leagues which are hailed as high quality. Another two UEFA national team Czech Republic and Turkey also have more than half of their representatives playing locally.",
+            "Outside of UEFA, Qatar, Saudi Arabia, South Africa, Egypt, Iran and Uzbekistan also have more than half of their players playing locally, although all but Egypt and Iran have leagues established fewer than 50 years ago,, which could mean new stream of investment or interest.",
+            "Besides these countries, other countries then to have fewer than half of the team playing locally.",
+            "Therefore, to some extent, it seems that national players tend to play locally when there is a strong league or newly established league in their country. It could probably be similar to typical migration in which people move to strong economy or economy currently booming.",
+            "You could explore the above observations by clicking sort with most players playing in local leagues on the legend panel.",
+        ]
+    },
+     {"variable_name":"born_local",    
+        "analysis":[
+            "This visualisation gives a more general view of where players were born by simply looking at whether they were locally. ",
+            "As mentioned in the tab of where players were born, Curaçao stood up with only one player was born there while the rest of the team were born in Netherlands",
+            "",
+            "",
+            "",
+            "",
+            "",
+]}
 ]
 
 //     {"variable_name":"birth_place", "label":"Where players were born",
