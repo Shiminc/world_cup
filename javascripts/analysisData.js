@@ -1,4 +1,4 @@
-analysis_data = [
+const analysis_data = [
     {"variable_name":"play_in", 
         "analysis":[
             "Top Destinations - UEFA",
