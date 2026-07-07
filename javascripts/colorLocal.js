@@ -23,3 +23,18 @@ const colorScalePlayLocal = d3.scaleOrdinal()
 const colorScaleBornLocal = d3.scaleOrdinal()
         .domain(born_local_data.map(d => d.born_local))
         .range(born_local_data.map(d => d.color))
+
+const play_born_local_data=[
+    {"play_born_local": "Play_Foreign_Born_Local", "color": "purple","count":649},
+    {"play_born_local": "Play_and_Born_Local", "color": "orange","count":312},
+    {"play_born_local": "Play_and_Born_Foreign", "color": "gray","count":256},
+    {"play_born_local": "Play_Local_Born_Foreign", "color": "green","count":31},
+]
+
+const barWidthScalePlayBornLocal = d3.scaleLinear()
+        .domain([0,700])
+        .range([0,100])
+
+const colorScalePlayBornLocal = d3.scaleOrdinal()
+        .domain(play_born_local_data.map(d => d.play_born_local))
+        .range(play_born_local_data.map(d => d.color))

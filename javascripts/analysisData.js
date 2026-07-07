@@ -25,7 +25,7 @@ const analysis_data = [
                 "You could explore the above observations by selecting France and Netherlands on the legend.",
                 "Most Mixed team",
                 "Most interesting thing to observe is that Bosnia and Herzegovina, Qatar, Tunisia, Morrocco, Cape Verde seem to have most mixed of players born in different countries. Given its history, quite a few players representing Bosnia and Herzegovina players come from countries breaking up from Yugoslavia.", 
-                "The unexplained surprise to me is that of Qatar which have players born in quite a diverse place including Egypt, Portugal, Brazil, Senegal, Ghana, Sudan, Tunisia, France, Belgium and Algeria.",
+                "The unexplained surprise to me is that of Qatar which have players born in quite a diverse place including Egypt, Portugal, Brazil, Senegal, Ghana, Sudan, Tunisia, France, Belgium and Algeria. Nonetheless, all these foreign-born players play professionally in Qatar.",
                 "There are eight national teams which hail all players born locally, and another 10 have all but one player born locally. It worth poiting out that Japan and South Korea, which was stereotypically viewed as homogeneous society, each recruits one player not born locally, that is Suzuki and Castrop.",
                 "Nonetheless, in total, there are 28 national teams with 80% players born locally. You could easily see it in the 'Whether players were born local' tab.",
                 "Therefore, it seems that birth place and national identity is still strongly tie together, compared to where you work or live.",
@@ -34,6 +34,7 @@ const analysis_data = [
         },
         {"variable_name":"play_local",    
         "analysis":[
+            "This visualisation gives a more general view of where players play professionally by simply looking at whether they play locally. "
 
         ]},  
 ]

@@ -131,18 +131,25 @@ def read_json_to_df(path):
 
     return data
 
-
+def play_born_local(data):
+    data['play_born_local']="Play_and_Born_Local"
+    data.loc[(data['local']) & (data['born_local_boolean']==False),'play_born_local']="Play_Local_Born_Foreign"
+    data.loc[(data['local']==False) & (data['born_local_boolean']==False),'play_born_local']="Play_and_Born_Foreign"
+    data.loc[(data['local']==False) & (data['born_local_boolean']),'play_born_local']="Play_Foreign_Born_Local"
+ 
+    return data
 def main():
     data = read_json_to_df(PATH)
     play_in_numbers = pd.DataFrame(data.play_in.value_counts()).reset_index()
     # play_in_numbers.to_json('trial.json',orient='records')
     # data.to_csv('players.csv', encoding="utf-8-sig")
     # data.to_json(os.getcwd() + "/data/processed_data.json",orient='records')
-    data = data.merge(birthplace,on='player')
+    data = data.merge(birthplace,how='left',on='player')
     data['born_local_boolean']=data['birth_place']==data['country']
     data['born_local'] = ""
     data.loc[data['birth_place']==data['country'],'born_local']="Born_Local"
     data.loc[data['birth_place']!=data['country'],'born_local']="Not_Born_Local"
+    data = play_born_local(data)
     data_json = reorganise_to_json(data)
     with open(os.getcwd() + "/data/data.json",'w') as file:
         json.dump(data_json,file)

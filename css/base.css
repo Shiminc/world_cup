@@ -57,13 +57,13 @@ body{
 
 .selection-grid-container{
     display: grid;
-    grid-template-columns: 250px 240px 240px 240px 240px 240px;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px;
     /* grid-gap: 0.2%; */
     justify-content: center;
-    margin-left:40px;
+    margin-left:auto;
     margin-bottom: 40px;
     margin-top: 20px;
-    position: sticky;
+    /* position: sticky; */
 }  
 
 .selection-button {
@@ -72,7 +72,7 @@ body{
     font-size: 15px;  
     justify-content: left;
     width: fit-content;
-    width: 50%;
+    width: 80%;
     background-color: powderblue;
     cursor: pointer;
     border-radius: 10px;

@@ -62,6 +62,9 @@ function circleFill(d)
         else if (varName === 'born_local'){
             return colorScaleBornLocal(d.born_local)
         }
+        else if (varName === 'play_born_local'){
+            return colorScalePlayBornLocal(d.play_born_local)
+        }
         else if (varName === 'age'){
             return xScaleAgeColor(d.age)
         }
