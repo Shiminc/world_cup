@@ -18,6 +18,7 @@ variables = [
         "data":born_local_data},
     {"variable_name":"play_born_local", "label":"Whether players were born local and play locally",
         "sort":"Sort with teams with most players born locally",
+        // "sort_index":"proportion_play_born_local", 
         "sort_index":"proportion_born_local",   
         "data":play_born_local_data},    
     {"variable_name":"league", "label":"Bonus: Whether players play in Big 5 leagues",

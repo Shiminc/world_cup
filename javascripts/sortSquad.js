@@ -16,6 +16,15 @@ function sortTeam (e,d){
     const varSort = variables.find(variable=>variable.variable_name===varName)
         sortIndex = varSort.sort_index
         sorted_data = d3.sort(dataset,(d)=>-d[sortIndex])
+        // if (sortIndex == "proportion_play_born_local"){
+        //     sorted_data = dataset.sort(function (a,b){
+        //         return a.proportion_born_local - b.proportion_born_local || a.proportion_play_local - b.proportion_play_local;
+        //     })
+        // } else {
+        //     sorted_data = d3.sort(dataset,(d)=>-d[sortIndex])
+
+        // }
+        
         d3.select('#group.sort-team ')
         .style('background-color', 'powderblue')
         .style('color','black')

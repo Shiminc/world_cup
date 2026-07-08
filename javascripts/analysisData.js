@@ -56,10 +56,22 @@ const analysis_data = [
 ]},     
 {"variable_name":"play_born_local",    
         "analysis":[
-            "This viualisation illustrates whether players were born and play local at the same time, by crossing the variables born local and play local."
-            ""
+            "This viualisation illustrates whether players were born and play local at the same time, by crossing the variables born local and play local.",
+            "Most observations have been written when I look at both variables separately.",
+            "However, one team stands up in this visualisation, that is Qatar, which have relatively more players who are born foreign but play in local football. Does this mirror people migrating back to their ancestry country?",
+            "There are also significant numbers of natiional players (20%) who were born and play foreign. Although there might times that they have or would have played in the local football, it is interesting to investigate how they relate themselves to the country they represented in."
+]},
+ {"variable_name":"league",
+    "analysis":[
+        "This visualisation is less relevant to the central theme of migration but to join the conversations about whether the so-called European Big 5 leagues really produced the top players/national teams of the world.",
+        "With the world-cup is still on-going, and even if we takes the results as the criteria, it is hard to judge whether there is a Big 5 effects in winning, especially there could be so much going on within a team and a match.",
+        "Among the top 10 teams with the most numbers of players in the Big 5 leagues, Germany, Senegal, Netherlands, Austria were knocked out of the tournament in the Last 32, while the remaining six took out the spots of the last eight, with the exception of Morocco and Norway which also have almost half of their players playing in the big.",
+        "Nonetheless, there were also national teams that reached last 16 with fewer than five players playing in the Big 5 leagues, including Paraguay, Egypt and Mexico.",
+        "You could explore the above observations by clicking sort with teams with most players in Big 5 on the legend panel.",
+    ]
+
+ }
 ]
-}
 //     {"variable_name":"league", "label":"Whether players play in Big 5 leagues",
 //         "sort":"Sort with teams with most players in Big 5 on top",
 //         "sort_index":"proportion_big_five",   
