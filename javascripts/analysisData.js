@@ -70,6 +70,14 @@ const analysis_data = [
         "You could explore the above observations by clicking sort with teams with most players in Big 5 on the legend panel.",
     ]
 
+ },
+ {"variable_name":"age",
+    "analysis":[
+        "This is another bonus visualisation which is not related to the central theme of migration, but to join the conversations after the debate about whether Ronaldo should have been included in the Portugal team.",
+        "I don't want to contribute to the narratives about ageism, but curious about other relatively older players in other teams instead of just focusing on Ronaldo of Portugal, so I produce this visualisation.",
+        "As expected, very few players above 40 are included in the World Cup National teams, with 5 out of 8 being goalkeepers, while the remaining are the big names - Ronaldo, Modric, Džeko. Džeko seemed not to receive as much attention as the former two in the discussion of age in this world cup.",
+        "Nonetheless, it is also interesting to see that it is not the teams these three players in are the oldest. You could explore by clicking sort teams with highest mean age on top, and you will be shown mean age of each team."
+    ]
  }
 ]
 //     {"variable_name":"league", "label":"Whether players play in Big 5 leagues",

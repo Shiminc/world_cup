@@ -58,6 +58,9 @@ function showSelected(varSelected){
     d3.select('.legend-ul')
     .remove()
 
+    d3.selectAll('.country-sort-index')
+        .remove()
+
     createLegendAll (varSelected,varColorData)
     listenForHighLightSelection() 
     listenForShowAll()

@@ -11,6 +11,22 @@ const plotMultipleTeam = (data,varName) => {
       .attr('class','country-name')
       .text(d=>d.country.replaceAll("_"," "))
 
+          if (varName == 'age'){
+        const varSort = variables.find(variable=>variable.variable_name===varName)
+          sortIndex = varSort.sort_index
+          teamPlot
+          .append('div')
+          .attr('class','country-sort-index')
+          .text(d=>`Mean age: ${d[sortIndex].toFixed(2)}`)
+      }
+      else {
+        d3.selectAll('.country-sort-index')
+        .remove()
+      }
+
+
+
+
       teamSVG = teamPlot
       .append('svg')
       .attr("viewBox", `0, 0, ${teamChart.width + teamChartMargin.left + teamChartMargin.right}, ${teamChart.height + teamChartMargin.bottom + teamChartMargin.top}`)
@@ -32,6 +48,7 @@ const plotMultipleTeam = (data,varName) => {
       .attr('r',xScale.bandwidth()/3)
             .attr('stroke-width', 0.05)
       .attr('stroke','black')
+
 
 //to show index NOT priority
 // const varSort = variables.find(variable=>variable.variable_name===varName)
