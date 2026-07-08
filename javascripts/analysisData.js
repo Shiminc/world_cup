@@ -49,17 +49,17 @@ const analysis_data = [
         "analysis":[
             "This visualisation gives a more general view of where players were born by simply looking at whether they were locally. ",
             "As mentioned in the tab of where players were born, Curaçao stood up with only one player born there while the rest of the team were born in Netherlands.",
-            "Other teams that are represented by more than foreign players include DR Congo, Morocco, Haiti, Algeria and Tunisia, all of whom has large number of France-born players.",
+            "Other teams that are represented by more foreign players include DR Congo, Morocco, Haiti, Algeria and Tunisia, all of whom has large number of France-born players. Bosnia and Herzegovia, Cape Verde and Qatar also have almost half of their players born elsewhere, although in more varied countries.",
             "You could explore the above observations by clicking sort with most players born locally on the legend panel. Then, to see the place where those foreign-born players were born, click the Where players were born tab.",
             "",
             "",
-]}
+]},     
+{"variable_name":"play_born_local",    
+        "analysis":[
+            "This viualisation illustrates whether players were born and play local at the same time, by crossing the variables born local and play local."
+            ""
 ]
-
-//     {"variable_name":"birth_place", "label":"Where players were born",
-//         "sort":"Sort with most mixed teams on top",
-//         "sort_index":"birth_diversity_index",   
-//         "data":birth_place_data},
+}
 //     {"variable_name":"league", "label":"Whether players play in Big 5 leagues",
 //         "sort":"Sort with teams with most players in Big 5 on top",
 //         "sort_index":"proportion_big_five",   
