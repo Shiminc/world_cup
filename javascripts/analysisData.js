@@ -7,8 +7,9 @@ const analysis_data = [
             "Perhaps also due to proximity, other European teams Switzerland, Austria, Netherlands, Norway and Belgium also have 70% of their players playing professionally in these five destinations.",
             "Despite the distance, 77% of the players representing Senegal and Argentina also play in these top five destinations.",
             "You could explore the above observations by selecting these top five destinations on the legend panel to see the distributions of players playing there. To further delve into these five destinations, you could also explore whether players play in the top leagues of these five destinations in another tab.",
-            "Unsurprisingly, the next destination is Saudi Arabia given its massive investment in football, attracting players from 18 national teams on top of its own national team.",
+            "Unsurprisingly, the next destination is Saudi Arabia given its massive investment in football, attracting players from 18 national teams on top of its own national team, making it the only destinations in AFC that attracted European National Team players playing there.",
             "With football probably still being euro-centric, all destinations under UEFA also attracts at least 22 out of 26 players representing Ivory Coast, DR Congo, Ghana, Senegal, Cape Verde, Curaçao and Japan",
+            "Elsewhere, most destinations seem to only attract national team players from neighbouring countries/regions. For example, destination in South America only attracted players representing countries in the region, despite the reputations of Brazil being a footbal nation.",
             "Teams with most mixed destinations",
             "Nonetheless, it is not every team is looking up to destinations under UEFA. For example, Paraguay consists of most diverse group of players in terms of where they play professionally, and only one of them play in England.",
             "Bosnia and Herzegovina is another team with high diversity though all of them play in UEFA, and similar to the wonderfull Cape Verde with all but three players play there.", 
@@ -24,11 +25,11 @@ const analysis_data = [
                 "Similarly, another top 'producer' is Netherlands, which to some extent produced two teams in the world cup, Netherlands national team itself and Curaçao, which used to be colonised by the Dutch. Nonetheless, Curacao does have a player born locally, Chong and with the surname, you know, he is of Chinese descent. What a wonderful mix of culture!",
                 "You could explore the above observations by selecting France and Netherlands on the legend.",
                 "Most Mixed team",
-                "Most interesting thing to observe is that Bosnia and Herzegovina, Qatar, Tunisia, Morrocco, Cape Verde seem to have most mixed of players born in different countries. Given its history, quite a few players representing Bosnia and Herzegovina players come from countries breaking up from Yugoslavia.", 
-                "The unexplained surprise to me is that of Qatar which have players born in quite a diverse place including Egypt, Portugal, Brazil, Senegal, Ghana, Sudan, Tunisia, France, Belgium and Algeria. Nonetheless, all these foreign-born players play professionally in Qatar.",
-                "There are eight national teams which hail all players born locally, and another 10 have all but one player born locally. It is worth pointing out that Japan and South Korea, which was stereotypically viewed as homogeneous society, each recruits one player not born locally, that is Suzuki and Castrop. That could be a sign of openness to foreign culture",
+                "Most interesting thing to observe is that Bosnia and Herzegovina, Qatar, Tunisia, Morrocco, Cape Verde seem to have most mixed of players born in different countries.", 
+                "The surprise to me is that of Qatar which have players born in quite a diverse place including Egypt, Portugal, Brazil, Senegal, Ghana, Sudan, Tunisia, France, Belgium and Algeria. Nonetheless, all these foreign-born players play professionally in Qatar.",
+                "There are eight national teams which gather all players born locally, and another 10 have all but one player born locally. It is worth pointing out that Japan and South Korea, which was stereotypically viewed as homogeneous society, each recruits one player not born locally, that is Suzuki and Castrop. That could be a sign of eventual openness to foreign culture",
                 "Nonetheless, in total, there are 28 national teams with 80% players born locally. You could easily see it in the 'Whether players were born local' tab.",
-                "It seems, therefore, that birth place and national identity is still strongly tie together.",
+                "It seems, therefore, that birth place and national identity is still strongly tied together.",
                 "You could explore the above observations by clicking sort with most mixed teams on the legend panel.",
             ]
         },
@@ -58,7 +59,7 @@ const analysis_data = [
         "analysis":[
             "This viualisation illustrates whether players were born and play local at the same time, by crossing the variables born local and play local.",
             "Most observations have been written when I look at both variables separately.",
-            "However, one team stands up in this visualisation, that is Qatar, which have relatively more players who are born foreign but play in local football. Does this mirror people migrating back to their ancestry country?",
+            "However, one team stands up in this visualisation, that is Qatar, which have relatively more players who are born foreign but play in local football. Does this mirror people migrating back to their ancestry country or naturalised citizenship?",
             "There are also significant numbers of natiional players (20%) who were born and play foreign. Although there might times that they have or would have played in the local football, it is interesting to investigate how they relate themselves to the country they represented in."
 ]},
  {"variable_name":"league",
@@ -80,18 +81,3 @@ const analysis_data = [
     ]
  }
 ]
-//     {"variable_name":"league", "label":"Whether players play in Big 5 leagues",
-//         "sort":"Sort with teams with most players in Big 5 on top",
-//         "sort_index":"proportion_big_five",   
-//         "data":league_data},
-  
-//     {"variable_name":"born_local", "label":"Whether players were born local",
-//         "sort":"Sort with teams with most players born locally",
-//         "sort_index":"proportion_born_local",   
-//         "data":born_local_data},
-//     {"variable_name":"age", "label":"Bonus: Players' age",
-//         "sort":"Sort with teams with highest mean age on top",
-//         "sort_index":"mean_age",   
-//         "data":age_data},
-
-// ]
