@@ -5,9 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>FIFA World Cup 2026</title>
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" href="./css/logo.css">
     <link rel="icon" href="./assets/favicon.PNG" type="image/x-icon" />
 </head>
 <body>
+	<div class = "grid-nav-container">
+        <div class = 'grid-logo' id ='logo' ></div>
+        <div class = 'grid-about'><a href='https://shiminc.github.io/about.html'>About</a></div>
+
+    </div>
 	<div class="normal-container">
 		<div class="title">Where World Cup 2026 players were born and play professionally?</div>
 		<div class="subtitle">How this international sport event reflects global human movement? </div>
@@ -78,6 +84,7 @@
 		</div>
 	</div>
 	<!-- Load javascripts -->
+	
 	<script src="./javascripts/d3.v7.js"></script>
 	<script src="./javascripts/colorPlayIn.js"></script>
 	<script src="./javascripts/colorBirthPlace.js"></script>
@@ -103,6 +110,12 @@
 
 
 	<script src="./javascripts/load-data.js"></script>
-
+	<!-- for logo -->
+<script type="module" src="./javascripts/logo/main.js"></script> 
+<script>
+        document.getElementById('logo').addEventListener('click', function(){
+            window.location.href ='https://shiminc.github.io/vizard'
+        })
+</script>
 </body>
 </html>
