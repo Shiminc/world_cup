@@ -12,7 +12,7 @@ d3.json("./data/data.json")
 
     listenVarSelection()
     listenSort()
-
+    listenSortPlayer()
   })
 .catch(error => console.log(error));
 
