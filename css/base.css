@@ -82,7 +82,7 @@ body{
     cursor:pointer;
 
 }
-
+.sort-player,
 .sort-team {
     display: flex;
     font-family: 'Roboto', sans-serif;
